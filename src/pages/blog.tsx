@@ -1,33 +1,31 @@
 import React from "react";
-import Link from "next/link";
 import type { InferGetStaticPropsType } from "next";
 
-import { pick } from "@/lib/utils";
 import { allBlogs } from ".contentlayer/data";
+import { NextSeo } from "next-seo";
+
+import { pick } from "@/lib/utils";
+import BlogPost from "@/components/BlogPost";
 
 const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <section>
-      {posts.map(({ title, summary, slug, publishedAt }) => (
-        <article key={slug}>
-          <Link href={`/blog/${slug}`}>
-            <a>
-              <h2>Title: {title}</h2>
-            </a>
-          </Link>
+    <>
+      <NextSeo title="Blog" />
 
-          <p>Summary: {summary}</p>
+      <section>
+        <h1>Blog</h1>
 
-          <time>Published At: {publishedAt}</time>
-        </article>
-      ))}
-    </section>
+        {posts.map((post) => (
+          <BlogPost post={post} key={post.slug} />
+        ))}
+      </section>
+    </>
   );
 };
 
 export const getStaticProps = async () => {
   const posts = allBlogs.map((post) =>
-    pick(post, ["slug", "title", "summary", "publishedAt"])
+    pick(post, ["slug", "title", "summary", "publishedAt", "author"])
   );
 
   return { props: { posts } };
