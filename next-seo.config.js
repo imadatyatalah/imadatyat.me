@@ -1,8 +1,8 @@
 const NextSeo = {
   openGraph: {
     type: "website",
-    url: "",
-    site_name: "",
+    url: "https://imadatyatalah.vercel.app",
+    site_name: "imadatyatalah",
   },
 };
 
