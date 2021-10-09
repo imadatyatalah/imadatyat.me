@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: "https://next-js-tailwindcss-template.vercel.app",
+  siteUrl: "",
   generateRobotsTxt: true,
 };

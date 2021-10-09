@@ -22,8 +22,9 @@ NProgress.configure({ showSpinner: false });
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
+      <DefaultSeo {...SEO} />
+
       <ThemeProvider defaultTheme="system" attribute="class">
-        <DefaultSeo {...SEO} />
         <Component {...pageProps} />
       </ThemeProvider>
     </>
