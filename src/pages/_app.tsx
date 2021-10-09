@@ -2,6 +2,8 @@ import React from "react";
 import Router from "next/router";
 import type { AppProps } from "next/app";
 
+import Global from "@/layouts/Global";
+
 import { ThemeProvider } from "next-themes";
 import { DefaultSeo } from "next-seo";
 import NProgress from "nprogress";
@@ -25,7 +27,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <DefaultSeo {...SEO} />
 
       <ThemeProvider defaultTheme="system" attribute="class">
-        <Component {...pageProps} />
+        <Global>
+          <Component {...pageProps} />
+        </Global>
       </ThemeProvider>
     </>
   );
