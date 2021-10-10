@@ -8,7 +8,7 @@ interface Props {
 }
 
 const BlogLayout = ({ children, post }: Props) => {
-  const { title, author } = post;
+  const { title } = post;
 
   return (
     <section className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
@@ -16,7 +16,7 @@ const BlogLayout = ({ children, post }: Props) => {
         {title}
       </h1>
 
-      <strong>{author}</strong>
+      <strong>Imad Atyat-Alah</strong>
 
       <div className="w-full mt-4 prose dark:prose-dark max-w-none">
         {children}
