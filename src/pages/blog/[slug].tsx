@@ -5,6 +5,7 @@ import { getMDXComponent } from "mdx-bundler/client";
 import { allBlogs } from ".contentlayer/data";
 import type { Blog } from ".contentlayer/types";
 
+import MDXComponents from "@/components/MDXComponents";
 import BlogLayout from "@/layouts/Blog";
 
 interface Props {
@@ -18,11 +19,9 @@ const Post = ({ post }: Props) => {
   );
 
   return (
-    <section>
-      <BlogLayout post={post}>
-        <Component />
-      </BlogLayout>
-    </section>
+    <BlogLayout post={post}>
+      <Component components={{ ...MDXComponents }} />
+    </BlogLayout>
   );
 };
 

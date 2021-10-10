@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 interface Props {
+  // @TODO: Find a better way.
   post: {
     slug: string;
     title: string;

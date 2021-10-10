@@ -9,13 +9,13 @@ interface Props {
 
 const BlogLayout = ({ children, post }: Props) => {
   return (
-    <>
+    <section>
       <h1>{post.title}</h1>
 
       <strong>{post.author}</strong>
 
       {children}
-    </>
+    </section>
   );
 };
 
