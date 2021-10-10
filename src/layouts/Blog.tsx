@@ -8,13 +8,19 @@ interface Props {
 }
 
 const BlogLayout = ({ children, post }: Props) => {
+  const { title, author } = post;
+
   return (
-    <section>
-      <h1>{post.title}</h1>
+    <section className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
+      <h1 className="mb-4 text-3xl font-bold tracking-tight md:text-5xl">
+        {title}
+      </h1>
 
-      <strong>{post.author}</strong>
+      <strong>{author}</strong>
 
-      {children}
+      <div className="w-full mt-4 prose dark:prose-dark max-w-none">
+        {children}
+      </div>
     </section>
   );
 };
