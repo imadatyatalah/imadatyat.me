@@ -16,7 +16,7 @@
 header,
 main,
 footer {
-  @apply max-w-[1440px] mx-auto;
+  @apply max-w-[1440px] mx-auto w-full;
 }
 
 html {

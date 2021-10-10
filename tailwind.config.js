@@ -1,5 +1,5 @@
 /* eslint @typescript-eslint/no-var-requires: "off" */
-const { spacing, fontFamily } = require("tailwindcss/defaultTheme");
+const { spacing, fontFamily, colors } = require("tailwindcss/defaultTheme");
 
 module.exports = {
   mode: "jit",
@@ -24,6 +24,7 @@ module.exports = {
           800: "#222222",
           900: "#111111",
         },
+        grey: colors.gray,
       },
 
       typography: (theme) => ({

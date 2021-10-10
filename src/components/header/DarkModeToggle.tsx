@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 
 import { useTheme } from "next-themes";
 
+import SunIcon from "@/icons/Sun";
+import MoonIcon from "@/icons/Moon";
+
 const DarkModeToggle = () => {
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -10,15 +13,18 @@ const DarkModeToggle = () => {
 
   if (!mounted) return null;
 
+  const toggleTheme = () =>
+    setTheme(resolvedTheme === "light" ? "dark" : "light");
+
   return (
-    <button
-      className="px-4 py-2 font-semibold text-white bg-black rounded-md dark:text-black dark:bg-white"
-      onClick={() => {
-        setTheme(resolvedTheme === "light" ? "dark" : "light");
-      }}
-    >
-      Change Theme
-    </button>
+    <div>
+      <button
+        className="p-2 font-semibold rounded-md bg-grey-300 dark:bg-grey-800"
+        onClick={toggleTheme}
+      >
+        {resolvedTheme === "light" ? <MoonIcon /> : <SunIcon />}
+      </button>
+    </div>
   );
 };
 
