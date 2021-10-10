@@ -8,12 +8,11 @@ interface Props {
     title: string;
     summary: string;
     publishedAt: string;
-    author: string;
   };
 }
 
 const BlogPost = ({ post }: Props) => {
-  const { slug, title, summary, publishedAt, author } = post;
+  const { slug, title, summary, publishedAt } = post;
 
   return (
     <article className="my-4 bg-blue-400">
@@ -24,7 +23,7 @@ const BlogPost = ({ post }: Props) => {
       </Link>
 
       <p>Summary: {summary}</p>
-      <p>Author: {author}</p>
+      <p>Author: Imad Atyat-Alah</p>
 
       <time>Published At: {publishedAt}</time>
     </article>
