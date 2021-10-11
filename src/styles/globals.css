@@ -16,7 +16,7 @@
 header,
 main,
 footer {
-  @apply max-w-[1440px] mx-auto w-full;
+  @apply container mx-auto lg:max-w-4xl;
 }
 
 html {

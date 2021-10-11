@@ -1,19 +1,14 @@
 import React from "react";
 import Link from "next/link";
 
-interface Props {
-  // @TODO: Find a better way.
-  post: {
-    slug: string;
-    title: string;
-    summary: string;
-    publishedAt: string;
-  };
-}
+import { Blog } from ".contentlayer/types";
 
-const BlogPost = ({ post }: Props) => {
-  const { slug, title, summary, publishedAt } = post;
-
+const BlogPost = ({
+  slug,
+  title,
+  summary,
+  publishedAt,
+}: Pick<Blog, "title" | "summary" | "slug" | "publishedAt">) => {
   return (
     <article className="my-4 bg-blue-400">
       <Link href={`/blog/${slug}`}>

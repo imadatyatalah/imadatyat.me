@@ -19,10 +19,14 @@ const DarkModeToggle = () => {
   return (
     <div>
       <button
-        className="p-2 font-semibold rounded-md bg-grey-300 dark:bg-grey-800"
+        className="p-2 font-semibold bg-gray-200 rounded-md dark:bg-gray-600"
         onClick={toggleTheme}
       >
-        {resolvedTheme === "light" ? <MoonIcon /> : <SunIcon />}
+        {resolvedTheme === "light" ? (
+          <MoonIcon className="w-5 h-5" />
+        ) : (
+          <SunIcon className="w-5 h-5" />
+        )}
       </button>
     </div>
   );

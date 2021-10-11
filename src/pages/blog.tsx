@@ -16,7 +16,7 @@ const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
         <h1>Blog</h1>
 
         {posts.map((post) => (
-          <BlogPost post={post} key={post.slug} />
+          <BlogPost key={post.slug} {...post} />
         ))}
       </section>
     </>
