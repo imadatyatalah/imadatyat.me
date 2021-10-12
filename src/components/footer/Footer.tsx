@@ -1,8 +1,13 @@
 import React from "react";
 
+const SOCIAL_LINKS = [
+  { title: "Github", href: "https://github.com/imadatyatalah" },
+  { title: "Twitter", href: "https://twitter.com/ImadAtyat" },
+];
+
 const Footer = () => {
   return (
-    <footer className="text-center">
+    <footer className="py-6 text-center">
       <p>&copy; 2021-present Imad Atyat-Alah. All Rights Reserved.</p>
     </footer>
   );
