@@ -5,19 +5,32 @@ import { allBlogs } from ".contentlayer/data";
 import { NextSeo } from "next-seo";
 
 import { pick } from "@/lib/utils";
+import { baseUrl } from "@/lib/constants";
 import BlogPost from "@/components/BlogPost";
 
 const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const title = "Blog";
+  const description =
+    "Friendly blog posts for developers. Especially about React, Next.js, and more!";
+  const url = `${baseUrl}/blog`;
+
   return (
     <>
-      <NextSeo title="Blog" />
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{ title, description, url }}
+      />
 
       <section>
-        <h1>Blog</h1>
+        <h1 className="text-3xl font-bold">{title}</h1>
 
-        {posts.map((post) => (
-          <BlogPost key={post.slug} {...post} />
-        ))}
+        <div className="flex flex-col my-4 sm:grid sm:grid-cols-2 sm:gap-6 md:gap-10 lg:grid-cols-3 xl:grid-cols-4">
+          {posts.map((post) => (
+            <BlogPost key={post.slug} {...post} />
+          ))}
+        </div>
       </section>
     </>
   );

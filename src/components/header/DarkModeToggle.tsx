@@ -19,7 +19,9 @@ const DarkModeToggle = () => {
   return (
     <div>
       <button
-        className="p-2 font-semibold bg-gray-200 rounded-md dark:bg-gray-600"
+        aria-label="Toggle Dark Mode"
+        type="button"
+        className="p-2 font-semibold transition-all bg-gray-200 rounded-md dark:bg-gray-600 hover:ring-2 ring-gray-300"
         onClick={toggleTheme}
       >
         {resolvedTheme === "light" ? (

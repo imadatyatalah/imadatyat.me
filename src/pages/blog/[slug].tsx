@@ -3,10 +3,12 @@ import type { GetStaticPaths, GetStaticProps } from "next";
 
 import { getMDXComponent } from "mdx-bundler/client";
 import { allBlogs } from ".contentlayer/data";
+import { NextSeo } from "next-seo";
 import type { Blog } from ".contentlayer/types";
 
 import MDXComponents from "@/components/MDXComponents";
 import BlogLayout from "@/layouts/Blog";
+import { baseUrl } from "@/lib/constants";
 
 interface Props {
   post: Blog;
@@ -18,10 +20,23 @@ const Post = ({ post }: Props) => {
     [post.body.code]
   );
 
+  const { title, summary, slug } = post;
+
+  const url = `${baseUrl}/blog/${slug}`;
+
   return (
-    <BlogLayout post={post}>
-      <Component components={{ ...MDXComponents }} />
-    </BlogLayout>
+    <>
+      <NextSeo
+        title={title}
+        description={summary}
+        canonical={url}
+        openGraph={{ title, description: summary, url }}
+      />
+
+      <BlogLayout post={post}>
+        <Component components={{ ...MDXComponents }} />
+      </BlogLayout>
+    </>
   );
 };
 
