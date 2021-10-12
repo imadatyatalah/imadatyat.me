@@ -18,9 +18,8 @@ const NavLink = forwardRef(
         <RoughNotation
           animationDuration={500}
           type="underline"
-          iterations={1}
-          strokeWidth={2}
-          color="red"
+          strokeWidth={4}
+          color={"#A42CD6"}
           show={isCurrentRoute}
         >
           {children}
