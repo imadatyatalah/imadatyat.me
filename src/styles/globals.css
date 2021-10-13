@@ -13,10 +13,70 @@
     U+FEFF, U+FFFD;
 }
 
-header,
-main,
-footer {
-  @apply container px-8 mx-auto lg:max-w-6xl;
+@layer base {
+  header,
+  main,
+  footer {
+    @apply container px-8 mx-auto lg:max-w-6xl;
+  }
+
+  ::selection {
+    color: white;
+    background-color: ;
+  }
+}
+
+.toggle-track {
+  background-color: #1a1a1a;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  height: 26px;
+  position: relative;
+  user-select: none;
+  width: 50px;
+}
+
+.toggle-sun,
+.toggle-moon {
+  align-items: center;
+  display: flex;
+  font-size: 12px;
+  padding: 0 4px;
+  width: 50%;
+}
+
+.toggle-moon {
+  justify-content: flex-end;
+}
+
+.toggle-thumb {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 20px;
+  left: 2px;
+  position: absolute;
+  top: 2px;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  width: 20px;
+}
+
+.toggle-track.toggled .toggle-thumb {
+  transform: translateX(26px);
+}
+
+#nprogress {
+  position: relative;
+  z-index: 9999999;
+}
+
+#nprogress .bar {
+  background: #a42cd6 !important;
+  height: 2.5px !important;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px #a42cd6, 0 0 5px #a42cd6 !important;
 }
 
 html {
@@ -51,13 +111,6 @@ html {
 
 #skip {
   scroll-margin-top: 1.125rem;
-}
-
-@supports not (backdrop-filter: none) {
-  .sticky-nav {
-    backdrop-filter: none;
-    @apply bg-opacity-100;
-  }
 }
 
 .prose .anchor {
