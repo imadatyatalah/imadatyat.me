@@ -9,7 +9,7 @@ describe("Home", () => {
     render(<Home />);
 
     const heading = screen.getByRole("heading", {
-      name: "Next Themes + Tailwind Dark Mode",
+      name: "Work In Progress!",
     });
 
     expect(heading).toBeInTheDocument();

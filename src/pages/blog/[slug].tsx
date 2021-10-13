@@ -26,12 +26,7 @@ const Post = ({ post }: Props) => {
 
   return (
     <>
-      <NextSeo
-        title={title}
-        description={summary}
-        canonical={url}
-        openGraph={{ title, description: summary, url }}
-      />
+      <NextSeo title={title} description={summary} canonical={url} />
 
       <BlogLayout post={post}>
         <Component components={{ ...MDXComponents }} />

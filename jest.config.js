@@ -5,8 +5,12 @@ module.exports = {
     "!**/node_modules/**",
   ],
   moduleNameMapper: {
+    "^@/lib/(.*)$": ["<rootDir>/src/lib/$1"],
     "^@/pages/(.*)$": ["<rootDir>/src/pages/$1"],
+    "^@/icons/(.*)$": ["<rootDir>/src/icons/$1"],
     "^@/styles/(.*)$": ["<rootDir>/src/styles/$1"],
+    "^@/layouts/(.*)$": ["<rootDir>/src/layouts/$1"],
+    "^@/components/(.*)$": ["<rootDir>/src/components/$1"],
 
     /* Handle CSS imports (with CSS modules)
       https://jestjs.io/docs/webpack#mocking-css-modules */
