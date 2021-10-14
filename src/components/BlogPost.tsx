@@ -1,7 +1,9 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import { Blog } from ".contentlayer/types";
+import dayjs from "dayjs";
 
 const BlogPost = ({
   slug,
@@ -10,18 +12,31 @@ const BlogPost = ({
   publishedAt,
 }: Pick<Blog, "title" | "summary" | "slug" | "publishedAt">) => {
   return (
-    <article className="my-4 bg-blue-400">
-      <Link href={`/blog/${slug}`}>
-        <a>
-          <h2>Title: {title}</h2>
-        </a>
-      </Link>
+    <Link href={`/blog/${slug}`}>
+      <a>
+        <article className="my-8 sm:my-0">
+          <div>
+            <Image
+              src="/nextjs.png"
+              width="1000"
+              height="571"
+              alt="Next.js"
+              className="rounded-lg"
+            />
+          </div>
 
-      <p>Summary: {summary}</p>
-      <p>Author: Imad Atyat-Alah</p>
+          <div>
+            <p className="text-[15px] text-gray-600">
+              {dayjs(publishedAt).format("MMMM D, YYYY")}
+            </p>
 
-      <time>Published At: {publishedAt}</time>
-    </article>
+            <h2 className="mb-2 text-2xl font-semibold">{title}</h2>
+
+            <p className="text-gray-700">{summary}</p>
+          </div>
+        </article>
+      </a>
+    </Link>
   );
 };
 
