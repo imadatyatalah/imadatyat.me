@@ -17,7 +17,7 @@ const BlogPost = ({
       <a>
         <article className="my-8 sm:my-0">
           {image ? (
-            <div>
+            <div className="flex mb-2">
               <Image
                 src={image}
                 width="1000"
