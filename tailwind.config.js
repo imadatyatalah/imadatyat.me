@@ -32,14 +32,10 @@ module.exports = {
           css: {
             color: theme("colors.gray.700"),
             a: {
-              color: theme("colors.blue.500"),
-              "&:hover": {
-                color: theme("colors.blue.700"),
-              },
+              // colors.fuchsia.700
+              color: "#A21CAF",
+
               code: { color: theme("colors.blue.400") },
-            },
-            "h2,h3,h4": {
-              "scroll-margin-top": spacing[32],
             },
             thead: {
               borderBottomColor: theme("colors.gray.200"),
@@ -53,10 +49,9 @@ module.exports = {
           css: {
             color: theme("colors.gray.200"),
             a: {
-              color: theme("colors.blue.400"),
-              "&:hover": {
-                color: theme("colors.blue.600"),
-              },
+              // colors.fuchsia.500
+              color: "#D946EF",
+
               code: { color: theme("colors.blue.400") },
             },
             blockquote: {
@@ -65,7 +60,6 @@ module.exports = {
             },
             "h2,h3,h4": {
               color: theme("colors.gray.100"),
-              "scroll-margin-top": spacing[32],
             },
             hr: { borderColor: theme("colors.gray.700") },
             ol: {

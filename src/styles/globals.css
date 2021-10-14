@@ -118,17 +118,17 @@
   @apply visible no-underline;
 }
 
-.prose a {
-  @apply transition-all;
-}
-
 .prose .anchor:after {
-  @apply text-gray-300 dark:text-gray-700;
+  @apply text-gray-300;
   content: "#";
 }
 
 .prose *:hover > .anchor {
   @apply visible no-underline;
+}
+
+.prose a {
+  @apply no-underline transition-all hover:underline;
 }
 
 .prose pre {
