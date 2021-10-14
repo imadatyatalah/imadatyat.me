@@ -10,20 +10,23 @@ const BlogPost = ({
   title,
   summary,
   publishedAt,
-}: Pick<Blog, "title" | "summary" | "slug" | "publishedAt">) => {
+  image,
+}: Pick<Blog, "title" | "summary" | "slug" | "publishedAt" | "image">) => {
   return (
     <Link href={`/blog/${slug}`}>
       <a>
         <article className="my-8 sm:my-0">
-          <div>
-            <Image
-              src="/nextjs.png"
-              width="1000"
-              height="571"
-              alt="Next.js"
-              className="rounded-lg"
-            />
-          </div>
+          {image ? (
+            <div>
+              <Image
+                src={image}
+                width="1000"
+                height="571"
+                alt="Next.js"
+                className="rounded-lg"
+              />
+            </div>
+          ) : null}
 
           <div>
             <p className="text-[15px] text-gray-600">

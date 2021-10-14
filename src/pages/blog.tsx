@@ -32,7 +32,7 @@ const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
 
 export const getStaticProps = async () => {
   const posts = allBlogs.map((post) =>
-    pick(post, ["slug", "title", "summary", "publishedAt"])
+    pick(post, ["slug", "title", "summary", "publishedAt", "image"])
   );
 
   return { props: { posts } };
