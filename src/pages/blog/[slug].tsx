@@ -22,11 +22,13 @@ const Post = ({ post }: Props) => {
 
   const { title, summary, slug } = post;
 
-  const url = `${baseUrl}/blog/${slug}`;
-
   return (
     <>
-      <NextSeo title={title} description={summary} canonical={url} />
+      <NextSeo
+        title={title}
+        description={summary}
+        canonical={`${baseUrl}/blog/${slug}`}
+      />
 
       <BlogLayout post={post}>
         <Component components={{ ...MDXComponents }} />

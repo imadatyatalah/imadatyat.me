@@ -16,6 +16,12 @@ const Header = () => {
     <header className="flex items-center justify-between h-[70px]">
       <nav className="flex">
         <ul className="flex">
+          <li>
+            <a href="#skip" className="skip-nav">
+              Skip to content
+            </a>
+          </li>
+
           {LINKS.map(({ title, href }) => (
             <li className="mr-8" key={title}>
               <Link href={href} passHref>

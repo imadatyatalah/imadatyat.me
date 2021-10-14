@@ -10,7 +10,7 @@ interface Props {
 const GlobalLayout = ({ children }: Props) => (
   <>
     <Header />
-    <main>{children}</main>
+    <main id="skip">{children}</main>
     <Footer />
   </>
 );
