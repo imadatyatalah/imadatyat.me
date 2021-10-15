@@ -17,11 +17,12 @@
   header,
   main,
   footer {
-    @apply container px-8 mx-auto lg:max-w-6xl;
+    @apply container px-8 mx-auto lg:max-w-4xl;
   }
 
   html {
     scroll-behavior: smooth;
+    min-width: 360px;
   }
 
   ::selection {

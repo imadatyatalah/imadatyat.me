@@ -15,7 +15,7 @@ const BlogPost = ({
   return (
     <Link href={`/blog/${slug}`}>
       <a>
-        <article className="my-8 sm:my-0">
+        <article className="max-w-sm my-8 sm:max-w-none sm:my-0 group">
           {image ? (
             <div className="flex mb-2">
               <Image
@@ -29,13 +29,15 @@ const BlogPost = ({
           ) : null}
 
           <div>
-            <p className="text-[15px] text-gray-600">
+            <p className="text-sm text-gray-600 dark:text-grey-400">
               {dayjs(publishedAt).format("MMMM D, YYYY")}
             </p>
 
-            <h2 className="mb-2 text-2xl font-semibold">{title}</h2>
+            <h2 className="mb-2 text-2xl font-semibold lg:group-hover:text-[#A21CAF] lg:dark:group-hover:text-[#D946EF] lg:transition-all">
+              {title}
+            </h2>
 
-            <p className="text-gray-700">{summary}</p>
+            <p className="text-gray-700 dark:text-grey-300">{summary}</p>
           </div>
         </article>
       </a>

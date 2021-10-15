@@ -20,7 +20,7 @@ const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
       <section>
         <h1 className="text-3xl font-bold">Blog</h1>
 
-        <div className="flex flex-col my-4 sm:grid sm:grid-cols-2 sm:gap-6 md:gap-10 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="flex flex-col items-center my-4 sm:grid sm:grid-cols-2 sm:gap-6 md:gap-10 lg:grid-cols-3">
           {posts.map((post) => (
             <BlogPost key={post.slug} {...post} />
           ))}
