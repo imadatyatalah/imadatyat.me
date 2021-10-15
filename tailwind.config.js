@@ -1,5 +1,6 @@
 /* eslint @typescript-eslint/no-var-requires: "off" */
-const { spacing, fontFamily, colors } = require("tailwindcss/defaultTheme");
+const { fontFamily } = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   mode: "jit",
@@ -25,6 +26,7 @@ module.exports = {
           900: "#111111",
         },
         grey: colors.gray,
+        fuchsia: colors.fuchsia,
       },
 
       typography: (theme) => ({
@@ -32,8 +34,7 @@ module.exports = {
           css: {
             color: theme("colors.gray.700"),
             a: {
-              // colors.fuchsia.700
-              color: "#A21CAF",
+              color: theme("colors.fuchsia.700"),
 
               code: { color: theme("colors.blue.400") },
             },
@@ -49,8 +50,7 @@ module.exports = {
           css: {
             color: theme("colors.gray.200"),
             a: {
-              // colors.fuchsia.500
-              color: "#D946EF",
+              color: theme("colors.fuchsia.500"),
 
               code: { color: theme("colors.blue.400") },
             },
