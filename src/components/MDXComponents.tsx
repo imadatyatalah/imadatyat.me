@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const CustomLink = (props: any) => {
+const CustomLink = (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
   const href = props.href;
   const isInternalLink = href && (href.startsWith("/") || href.startsWith("#"));
 
