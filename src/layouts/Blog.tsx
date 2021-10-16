@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import type { PropsWithChildren } from "react";
 
 import { Blog } from ".contentlayer/types";
 import { NextSeo } from "next-seo";
@@ -7,12 +8,7 @@ import dayjs from "dayjs";
 
 import { baseUrl } from "@/lib/constants";
 
-interface Props {
-  children: React.ReactNode;
-  post: Blog;
-}
-
-const BlogLayout = ({ children, post }: Props) => {
+const BlogLayout = ({ children, post }: PropsWithChildren<{ post: Blog }>) => {
   const { title, publishedAt, readingTime, image, summary, slug } = post;
 
   return (
