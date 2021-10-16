@@ -19,7 +19,7 @@ const BlogLayout = ({ children, post }: PropsWithChildren<{ post: Blog }>) => {
         canonical={`${baseUrl}/blog/${slug}`}
       />
 
-      <section className="flex flex-col items-start justify-center max-w-2xl mx-auto mb-16">
+      <article className="flex flex-col items-start justify-center max-w-2xl mx-auto mb-16">
         <header className="w-full">
           <h1 className="mb-4 text-3xl font-bold tracking-tight md:text-5xl">
             {title}
@@ -44,10 +44,10 @@ const BlogLayout = ({ children, post }: PropsWithChildren<{ post: Blog }>) => {
           ) : null}
         </header>
 
-        <div className="w-full mt-4 prose dark:prose-dark max-w-none">
+        <div className="w-full my-4 prose dark:prose-dark max-w-none">
           {children}
         </div>
-      </section>
+      </article>
     </>
   );
 };

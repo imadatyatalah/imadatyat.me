@@ -29,6 +29,35 @@
     color: white;
     background-color: #a42cd6;
   }
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    @apply text-gray-800 dark:text-gray-50;
+  }
+
+  pre::-webkit-scrollbar {
+    display: none;
+  }
+
+  pre {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  /* Remove Safari input shadow on mobile */
+  /* input[type="text"],
+  input[type="email"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  } */
+
+  /* table {
+    display: block;
+    max-width: fit-content;
+    overflow-x: auto;
+    white-space: nowrap;
+  } */
 }
 
 .toggle-track {
@@ -210,20 +239,6 @@
   @apply text-yellow-500;
 }
 
-code[class*="language-"],
-pre[class*="language-"] {
-  @apply text-gray-800 dark:text-gray-50;
-}
-
-pre::-webkit-scrollbar {
-  display: none;
-}
-
-pre {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
 .rehype-code-title {
   @apply px-5 py-3 font-mono text-sm font-bold text-gray-800 bg-gray-200 border border-b-0 border-gray-200 rounded-t-lg dark:text-gray-200 dark:border-gray-700 dark:bg-gray-800;
 }
@@ -236,14 +251,6 @@ pre {
   @apply block px-4 -mx-4 bg-gray-100 border-l-4 border-blue-500 dark:bg-gray-800;
 }
 
-/* Remove Safari input shadow on mobile */
-input[type="text"],
-input[type="email"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
 .metric-card > a {
   @apply no-underline;
 }
@@ -254,11 +261,4 @@ input[type="email"] {
 
 .step > h3 {
   @apply my-0;
-}
-
-table {
-  display: block;
-  max-width: fit-content;
-  overflow-x: auto;
-  white-space: nowrap;
 }
