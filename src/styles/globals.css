@@ -14,9 +14,9 @@
 }
 
 @layer base {
-  header,
+  #global-header,
   main,
-  footer {
+  #global-footer {
     @apply container px-8 mx-auto lg:max-w-4xl;
   }
 

@@ -13,7 +13,10 @@ const LINKS = [
 
 const Header = () => {
   return (
-    <header className="flex items-center justify-between h-[70px]">
+    <header
+      className="flex items-center justify-between h-[70px]"
+      id="global-header"
+    >
       <nav className="flex">
         <ul className="flex">
           <li>
