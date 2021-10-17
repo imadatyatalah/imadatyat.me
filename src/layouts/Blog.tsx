@@ -18,7 +18,7 @@ const BlogLayout = ({ children, post }: PropsWithChildren<{ post: Blog }>) => {
         canonical={`${baseUrl}/blog/${slug}`}
         openGraph={{
           article: { publishedTime: publishedAt, authors: [baseUrl] },
-          images: [{ url: image as string }],
+          images: [{ url: `${baseUrl}${image}` as string }],
         }}
       />
 
