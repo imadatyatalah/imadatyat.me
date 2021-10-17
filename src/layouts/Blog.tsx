@@ -8,7 +8,7 @@ import dayjs from "dayjs";
 import { baseUrl } from "@/lib/constants";
 
 const BlogLayout = ({ children, post }: PropsWithChildren<{ post: Blog }>) => {
-  const { title, publishedAt, readingTime, summary, slug } = post;
+  const { title, publishedAt, readingTime, image, summary, slug } = post;
 
   return (
     <>
@@ -16,6 +16,10 @@ const BlogLayout = ({ children, post }: PropsWithChildren<{ post: Blog }>) => {
         title={title}
         description={summary}
         canonical={`${baseUrl}/blog/${slug}`}
+        openGraph={{
+          article: { publishedTime: publishedAt, authors: [baseUrl] },
+          images: [{ url: image as string }],
+        }}
       />
 
       <article className="flex flex-col items-start justify-center max-w-2xl mx-auto mb-16">
