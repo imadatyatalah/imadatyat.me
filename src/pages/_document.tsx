@@ -1,11 +1,17 @@
 import React from "react";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
+import { __PROD__ } from "@/lib/constants";
+
 class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
         <Head>
+          {__PROD__ ? (
+            <script async src="https://cdn.splitbee.io/sb.js"></script>
+          ) : null}
+
           <link
             rel="preload"
             href="/fonts/inter-var-latin.woff2"
