@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import type { PropsWithChildren } from "react";
 
 import { Blog } from ".contentlayer/types";
@@ -9,7 +8,7 @@ import dayjs from "dayjs";
 import { baseUrl } from "@/lib/constants";
 
 const BlogLayout = ({ children, post }: PropsWithChildren<{ post: Blog }>) => {
-  const { title, publishedAt, readingTime, image, summary, slug } = post;
+  const { title, publishedAt, readingTime, summary, slug } = post;
 
   return (
     <>
@@ -30,18 +29,6 @@ const BlogLayout = ({ children, post }: PropsWithChildren<{ post: Blog }>) => {
 
             <p>{readingTime.text}</p>
           </div>
-
-          {image ? (
-            <div className="flex mt-9">
-              <Image
-                src={image}
-                width="1000"
-                height="571"
-                alt="Next.js"
-                className="rounded-lg"
-              />
-            </div>
-          ) : null}
         </header>
 
         <div className="w-full my-4 prose dark:prose-dark max-w-none">
