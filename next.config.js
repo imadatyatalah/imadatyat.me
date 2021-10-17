@@ -6,4 +6,6 @@ const { withContentlayer } = require("next-contentlayer");
 /**
  * @type {import('next').NextConfig}
  **/
-module.exports = withContentlayer()({});
+module.exports = withContentlayer()({
+  redirects: require("./next-redirects"),
+});

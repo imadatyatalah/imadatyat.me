@@ -35,7 +35,11 @@ export const getStaticProps = async () => {
     pick(post, ["slug", "title", "summary", "publishedAt", "image"])
   );
 
-  return { props: { posts } };
+  const sortedPosts = posts.sort(
+    (a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+  );
+
+  return { props: { posts: sortedPosts } };
 };
 
 export default Blog;
