@@ -33,7 +33,7 @@ const BlogPost = ({
               {dayjs(publishedAt).format("MMMM D, YYYY")}
             </p>
 
-            <h2 className="mb-2 text-2xl font-semibold lg:group-hover:text-fuchsia-700 lg:dark:group-hover:text-fuchsia-500 lg:transition-all">
+            <h2 className="mt-1 mb-2 text-xl font-semibold lg:group-hover:text-fuchsia-700 lg:dark:group-hover:text-fuchsia-500 lg:transition-all">
               {title}
             </h2>
 

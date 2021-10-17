@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image, { ImageProps } from "next/image";
 
 const CustomLink = (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
   const href = props.href;
@@ -16,8 +17,13 @@ const CustomLink = (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
   return <a target="_blank" rel="noopener noreferrer" {...props} />;
 };
 
+const CustomImage = (props: ImageProps) => (
+  <Image alt={props.alt} className="rounded-lg" {...props} />
+);
+
 const MDXComponents = {
   a: CustomLink,
+  Image: CustomImage,
 };
 
 export default MDXComponents;

@@ -20,7 +20,7 @@ const Post = ({ post }: Props) => {
 
   return (
     <BlogLayout post={post}>
-      <Component components={{ ...MDXComponents }} />
+      <Component components={{ ...MDXComponents } as any} />
     </BlogLayout>
   );
 };
