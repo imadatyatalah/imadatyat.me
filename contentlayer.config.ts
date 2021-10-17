@@ -4,6 +4,7 @@ import {
   makeSource,
 } from "contentlayer/source-files";
 
+import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
 import readingTime from "reading-time";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
@@ -44,6 +45,7 @@ const contentLayerConfig = makeSource({
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
+      rehypeAccessibleEmojis,
       rehypeSlug,
       rehypeCodeTitles,
       rehypePrism,
