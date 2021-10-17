@@ -18,7 +18,9 @@ const CustomLink = (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
 };
 
 const CustomImage = (props: ImageProps) => (
-  <Image alt={props.alt} className="rounded-lg" {...props} />
+  <div className="flex">
+    <Image alt={props.alt} className="rounded-lg" {...props} />
+  </div>
 );
 
 const MDXComponents = {
