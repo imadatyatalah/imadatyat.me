@@ -60,43 +60,10 @@
   } */
 }
 
-.toggle-track {
-  background-color: #1a1a1a;
-  border-radius: 30px;
-  cursor: pointer;
-  display: flex;
-  height: 24px;
-  position: relative;
-  user-select: none;
-  width: 50px;
-}
-
-.toggle-sun,
-.toggle-moon {
-  align-items: center;
-  display: flex;
-  font-size: 12px;
-  padding: 0 4px;
-  width: 50%;
-}
-
-.toggle-moon {
-  justify-content: flex-end;
-}
-
-.toggle-thumb {
-  background-color: #fff;
-  border-radius: 50%;
-  height: 20px;
-  left: 2px;
-  position: absolute;
-  top: 2px;
-  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-  width: 20px;
-}
-
-.toggle-track.toggled .toggle-thumb {
-  transform: translateX(26px);
+@layer components {
+  .skip-nav {
+    @apply absolute px-4 py-3 transition-transform duration-200 transform -translate-y-12 -left-1/4 focus:top-4 focus:translate-y-3 -top-8;
+  }
 }
 
 #nprogress {
@@ -111,27 +78,6 @@
 
 #nprogress .peg {
   box-shadow: 0 0 10px #a42cd6, 0 0 5px #a42cd6 !important;
-}
-
-/* https://seek-oss.github.io/capsize/ */
-.capsize::before {
-  content: "";
-  margin-bottom: -0.098em;
-  display: table;
-}
-
-.capsize::after {
-  content: "";
-  margin-top: -0.219em;
-  display: table;
-}
-
-.skip-nav {
-  @apply absolute px-4 py-3 transition-transform duration-200 transform -translate-y-12 -left-1/4 focus:top-4 focus:translate-y-3 -top-8;
-}
-
-#skip {
-  scroll-margin-top: 0;
 }
 
 .prose .anchor {
