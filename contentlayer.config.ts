@@ -39,9 +39,25 @@ const Blog = defineDocumentType(() => ({
   computedFields,
 }));
 
+const Guides = defineDocumentType(() => ({
+  name: "Guides",
+  filePathPattern: "guides/*.mdx",
+  bodyType: "mdx",
+  fields: {},
+  computedFields,
+}));
+
+const Projects = defineDocumentType(() => ({
+  name: "Projects",
+  filePathPattern: "projects/*.mdx",
+  bodyType: "mdx",
+  fields: {},
+  computedFields,
+}));
+
 const contentLayerConfig = makeSource({
   contentDirPath: "data",
-  documentTypes: [Blog],
+  documentTypes: [Blog, Projects, Guides],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
