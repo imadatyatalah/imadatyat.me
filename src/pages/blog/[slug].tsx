@@ -8,11 +8,7 @@ import type { Blog } from ".contentlayer/types";
 import MDXComponents from "@/components/MDXComponents";
 import BlogLayout from "@/layouts/Blog";
 
-interface Props {
-  post: Blog;
-}
-
-const Post = ({ post }: Props) => {
+const Post = ({ post }: { post: Blog }) => {
   const Component = useMemo(
     () => getMDXComponent(post.body.code),
     [post.body.code]
