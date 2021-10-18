@@ -38,6 +38,9 @@ module.exports = {
 
               code: { color: theme("colors.blue.400") },
             },
+            blockquote: {
+              color: theme("colors.grey.600"),
+            },
             thead: {
               borderBottomColor: theme("colors.gray.200"),
             },

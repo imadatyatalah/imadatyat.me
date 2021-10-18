@@ -4,6 +4,7 @@ import {
   makeSource,
 } from "contentlayer/source-files";
 
+import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
 import readingTime from "reading-time";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
@@ -38,6 +39,14 @@ const Blog = defineDocumentType(() => ({
   computedFields,
 }));
 
+const Guides = defineDocumentType(() => ({
+  name: "Guides",
+  filePathPattern: "guides/*.mdx",
+  bodyType: "mdx",
+  fields: {},
+  computedFields,
+}));
+
 const Projects = defineDocumentType(() => ({
   name: "Projects",
   filePathPattern: "projects/*.mdx",
@@ -48,10 +57,11 @@ const Projects = defineDocumentType(() => ({
 
 const contentLayerConfig = makeSource({
   contentDirPath: "data",
-  documentTypes: [Blog, Projects],
+  documentTypes: [Blog, Projects, Guides],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
+      rehypeAccessibleEmojis,
       rehypeSlug,
       rehypeCodeTitles,
       rehypePrism,

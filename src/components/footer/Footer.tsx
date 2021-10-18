@@ -7,7 +7,7 @@ const SOCIAL_LINKS = [
 
 const Footer = () => {
   return (
-    <footer className="py-6 text-center">
+    <footer className="py-6 text-center" id="global-footer">
       <p className="text-sm">
         &copy; 2021-present Imad Atyat-Alah. All Rights Reserved.
       </p>
