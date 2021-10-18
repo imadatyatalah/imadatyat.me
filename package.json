@@ -53,7 +53,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.2.5",
     "lint-staged": "^11.2.2",
-    "next-sitemap": "^1.6.179",
+    "next-sitemap": "^1.6.184",
     "postcss": "^8.3.9",
     "prettier": "2.4.1",
     "rehype-accessible-emojis": "^0.3.2",
