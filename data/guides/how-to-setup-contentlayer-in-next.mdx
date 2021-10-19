@@ -1,0 +1,160 @@
+---
+title: How to setup Contentlayer in your Next.js app?
+description: Setup Contentlayer in a Next.js app with ease!
+image: ""
+---
+
+> Note: Contentlayer still in development and some APIs might change!
+
+## Creating your project
+
+Start by creating a new Next.js project if you don’t have one set up already. The easiest approach is to use Create Next App:
+
+```
+npx create-next-app@latest -e with-contentlayer my-project
+cd my-project
+```
+
+> Not available for now! Waiting for [this Pull-Request](https://github.com/vercel/next.js/pull/30045) to be merged.
+
+This will start a Next.js project with Contentlayer based on the official Next.js example.
+If you’d like to configure Contentlayer manually, Continue with the rest of this guide.
+
+## Setting up Contentlayer manually
+
+### Install Contentlayer
+
+```
+npm install contentlayer next-contentlayer
+```
+
+### Create `contentlayer.config.js` file
+
+```js:contentlayer.config.js
+import { defineDocumentType, makeSource } from "contentlayer/source-files";
+
+const computedFields = {
+  slug: {
+    type: "string",
+    resolve: (doc) => doc._raw.sourceFileName.replace(/\.md$/, ""),
+  },
+};
+
+const Post = defineDocumentType(() => ({
+  name: "Post",
+  filePathPattern: `**/*.md`,
+  fields: {
+    title: { type: "string", required: true },
+    date: { type: "string", required: true },
+  },
+  computedFields,
+}));
+
+export default makeSource({
+  contentDirPath: "posts",
+  documentTypes: [Post],
+});
+```
+
+### Enables live-reload and build setup(Optional)
+
+```js:next.config.js
+const { withContentlayer } = require("next-contentlayer");
+
+module.exports = withContentlayer()({
+  // Your Next.js config...
+});
+```
+
+### Add some posts
+
+1. Add `posts` folder in the root of your app
+2. Add `.md` files(e.g. `pre-rendering.md`)
+3. Add your content
+
+```md:posts/pre-rendering.md
+---
+title: "Two Forms of Pre-rendering"
+date: "2020-01-01"
+---
+
+Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
+
+- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
+- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
+
+Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
+```
+
+### Fetch and display your posts
+
+```jsx:pages/index.js
+import Link from "next/link";
+import { allPosts } from ".contentlayer/data";
+
+// NOTE: The functionality below will soon become part of Contentlayer.
+const pick = (obj, keys) => {
+  return keys.reduce((acc, key) => {
+    acc[key] = obj[key];
+    return acc;
+  }, {});
+};
+
+export default function Home({ posts }) {
+  return (
+    <section>
+      <ul>
+        {posts.map(({ slug, date, title }) => (
+          <li key={slug}>
+            <Link href={`/posts/${slug}`}>
+              <a>{title}</a>
+            </Link>
+            <br />
+            <small>{date}</small>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+export async function getStaticProps() {
+  const posts = allPosts.map((post) => pick(post, ["title", "date", "slug"]));
+
+  return { props: { posts } };
+}
+```
+
+### Create dynamic routes for each post
+
+In this section you should know how [dynamic routes](https://nextjs.org/docs/routing/dynamic-routes) works in Next.js,
+
+Add `posts/[slug].js` inside `pages`
+
+```jsx:pages/posts/[slug].js
+import { allPosts } from '.contentlayer/data'
+
+export default function Post({ post }) {
+  return (
+    <article>
+      <h1>{post.title}</h1>
+      <div>{post.date}</div>
+
+      <div dangerouslySetInnerHTML={{ __html: post.body.html }} />
+    </article>
+  )
+}
+
+export async function getStaticPaths() {
+  return {
+    paths: allPosts.map((p) => ({ params: { slug: p.slug } })),
+    fallback: false,
+  }
+}
+
+export async function getStaticProps({ params }) {
+  const post = allPosts.find((post) => post.slug === params?.slug)
+
+  return { props: { post } }
+}
+```
