@@ -45,6 +45,7 @@ const Guides = defineDocumentType(() => ({
   bodyType: "mdx",
   fields: {
     title: { type: "string", required: true },
+    publishedAt: { type: "string", required: true },
     description: { type: "string", required: true },
     image: { type: "string", required: false },
   },
