@@ -18,11 +18,7 @@ const Guides = ({ guides }: InferGetStaticPropsType<typeof getStaticProps>) => {
 
         <div className="my-4">
           {guides.map((guide) => (
-            <>
-              <GuidePost key={guide.slug} {...guide} />
-              <GuidePost key={guide.slug} {...guide} />
-              <GuidePost key={guide.slug} {...guide} />
-            </>
+            <GuidePost key={guide.slug} {...guide} />
           ))}
         </div>
       </section>
