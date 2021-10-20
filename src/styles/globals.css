@@ -23,6 +23,7 @@
   html {
     scroll-behavior: smooth;
     min-width: 360px;
+    @apply overflow-x-hidden;
   }
 
   ::selection {
