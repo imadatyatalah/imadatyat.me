@@ -19,14 +19,15 @@ const GuideLayout = ({
         description={description}
         canonical={`${baseUrl}/guides/${slug}`}
         openGraph={{
+          type: "article",
           article: { authors: [baseUrl] },
-          images: [{ url: `${baseUrl}${image}` as string }],
+          images: [{ url: `${baseUrl}${image}` }],
         }}
       />
 
       <article className="flex flex-col items-start justify-center max-w-2xl mx-auto mb-16">
-        <header className="w-full">
-          <h1 className="mb-4 text-3xl font-bold tracking-tight md:text-5xl">
+        <header>
+          <h1 className="mb-4 text-3xl font-bold tracking-tight text-center md:text-4xl md:leading-tight lg:text-[2.5rem]">
             {title}
           </h1>
         </header>
