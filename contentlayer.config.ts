@@ -43,7 +43,12 @@ const Guides = defineDocumentType(() => ({
   name: "Guides",
   filePathPattern: "guides/*.mdx",
   bodyType: "mdx",
-  fields: {},
+  fields: {
+    title: { type: "string", required: true },
+    publishedAt: { type: "string", required: true },
+    description: { type: "string", required: true },
+    image: { type: "string", required: false },
+  },
   computedFields,
 }));
 
