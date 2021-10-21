@@ -35,8 +35,6 @@ module.exports = {
             color: theme("colors.gray.700"),
             a: {
               color: theme("colors.fuchsia.700"),
-
-              code: { color: theme("colors.blue.400") },
             },
             blockquote: {
               color: theme("colors.grey.600"),
@@ -55,7 +53,7 @@ module.exports = {
             a: {
               color: theme("colors.fuchsia.500"),
 
-              code: { color: theme("colors.blue.400") },
+              code: { color: theme("colors.fuchsia.500") },
             },
             blockquote: {
               borderLeftColor: theme("colors.gray.700"),

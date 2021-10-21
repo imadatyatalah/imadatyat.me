@@ -8,6 +8,10 @@ const NextSeo = {
     url: "https://imadatyatalah.vercel.app",
     site_name: "imadatyatalah",
   },
+
+  twitter: {
+    handle: "@ImadAtyat",
+  },
 };
 
 export default NextSeo;

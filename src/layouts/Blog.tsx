@@ -25,7 +25,7 @@ const BlogLayout = ({ children, post }: PropsWithChildren<{ post: Blog }>) => {
 
       <article className="flex flex-col items-start justify-center max-w-2xl mx-auto mb-16">
         <header className="w-full">
-          <h1 className="mb-4 text-3xl font-bold tracking-tight md:text-5xl">
+          <h1 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl md:leading-tight lg:text-[2.5rem]">
             {title}
           </h1>
 
