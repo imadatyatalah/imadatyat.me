@@ -5,6 +5,11 @@ async function redirects() {
       destination: "https://github.com/imadatyatalah",
       permanent: true,
     },
+    {
+      source: "/blog/why-i-started-octocake",
+      destination: "/blog/why-i-have-started-octocake",
+      permanent: true,
+    },
   ];
 }
 
