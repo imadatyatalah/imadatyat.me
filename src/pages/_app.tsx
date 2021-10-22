@@ -26,7 +26,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <>
       <DefaultSeo {...SEO} />
 
-      <ThemeProvider defaultTheme="system" attribute="class">
+      <ThemeProvider forcedTheme="dark" attribute="class">
         <Global>
           <Component {...pageProps} />
         </Global>

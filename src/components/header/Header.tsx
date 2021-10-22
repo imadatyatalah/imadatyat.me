@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 
-import DarkModeToggle from "./DarkModeToggle";
 import NavLink from "./NavLink";
 
 const LINKS = [
@@ -17,6 +16,12 @@ const Header = () => {
       className="flex items-center justify-between h-[70px]"
       id="global-header"
     >
+      <div>
+        <Link href="/">
+          <a className="text-2xl font-semibold">Imad Atyat-Alah</a>
+        </Link>
+      </div>
+
       <nav className="flex">
         <ul className="flex">
           <li>
@@ -26,16 +31,12 @@ const Header = () => {
           </li>
 
           {LINKS.map(({ title, href }) => (
-            <li className="mr-8" key={title}>
-              <Link href={href} passHref>
-                <NavLink>{title}</NavLink>
-              </Link>
+            <li className="ml-8" key={title}>
+              <NavLink href={href} text={title} />
             </li>
           ))}
         </ul>
       </nav>
-
-      <DarkModeToggle />
     </header>
   );
 };

@@ -1,32 +1,26 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
-import { RoughNotation } from "react-rough-notation";
+import cn from "classnames";
 
-// eslint-disable-next-line react/display-name
-const NavLink = forwardRef(
-  (
-    { children, href, ...rest }: React.AnchorHTMLAttributes<HTMLAnchorElement>,
-    ref: any
-  ) => {
-    const { asPath } = useRouter();
+const NavLink = ({ text, href }: { text: string; href: string }) => {
+  const { asPath } = useRouter();
 
-    const isCurrentRoute = asPath === href;
+  const isCurrentRoute = asPath === href;
 
-    return (
-      <a ref={ref} href={href} {...rest}>
-        <RoughNotation
-          animationDuration={500}
-          type="underline"
-          strokeWidth={4}
-          color={"#A42CD6"}
-          show={isCurrentRoute}
-        >
-          {children}
-        </RoughNotation>
-      </a>
-    );
-  }
-);
+  const linkClassName = cn(
+    isCurrentRoute
+      ? "font-semibold text-gray-800 dark:text-gray-200"
+      : "font-normal text-gray-600 dark:text-gray-400",
+    "hidden p-1 transition-all rounded-lg md:inline-block sm:px-3 sm:py-2 hover:bg-gray-200 dark:hover:bg-gray-800"
+  );
+
+  return (
+    <Link href={href}>
+      <a className={linkClassName}>{text}</a>
+    </Link>
+  );
+};
 
 export default NavLink;
