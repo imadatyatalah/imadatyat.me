@@ -23,7 +23,6 @@
   html {
     scroll-behavior: smooth;
     min-width: 360px;
-    @apply overflow-x-hidden;
   }
 
   ::selection {
@@ -129,6 +128,10 @@
   /* Override removing top margin, causing layout shift */
   margin-top: 1.25em !important;
   margin-bottom: 1.25em !important;
+}
+
+.token.anchor.function {
+  display: none;
 }
 
 .token.comment,
