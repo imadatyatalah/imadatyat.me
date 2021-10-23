@@ -4,16 +4,21 @@ import Link from "next/link";
 
 import cn from "classnames";
 
-const NavLink = ({ text, href }: { text: string; href: string }) => {
+interface Props {
+  text: string;
+  href: string;
+}
+
+const NavLink = ({ text, href }: Props) => {
   const { asPath } = useRouter();
 
   const isCurrentRoute = asPath === href;
 
   const linkClassName = cn(
     isCurrentRoute
-      ? "font-semibold text-gray-800 dark:text-gray-200"
-      : "font-normal text-gray-600 dark:text-gray-400",
-    "hidden p-1 transition-all rounded-lg md:inline-block sm:px-3 sm:py-2 hover:bg-gray-200 dark:hover:bg-gray-800"
+      ? "md:text-gray-800 md:dark:text-gray-200"
+      : "md:text-gray-600 md:dark:text-gray-400 md:dark:hover:text-[#dedede]",
+    "font-semibold pb-6 flex md:font-medium md:p-1 md:transition-all md:rounded-lg md:inline-block md:px-3 md:py-2 md:hover:bg-gray-200 md:dark:hover:bg-gray-800"
   );
 
   return (
