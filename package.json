@@ -18,7 +18,7 @@
     "classnames": "^2.3.1",
     "contentlayer": "^0.0.27",
     "dayjs": "^1.10.7",
-    "esbuild": "^0.13.4",
+    "esbuild": "^0.13.8",
     "mdx-bundler": "^6.0.2",
     "next": "11.1.2",
     "next-contentlayer": "^0.0.27",
