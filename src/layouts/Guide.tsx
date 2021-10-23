@@ -5,6 +5,7 @@ import type { Guides } from ".contentlayer/types";
 import { NextSeo } from "next-seo";
 
 import { baseUrl } from "@/lib/constants";
+import ShareViaTwitter from "@/components/ShareViaTwitter";
 
 const GuideLayout = ({
   children,
@@ -35,6 +36,10 @@ const GuideLayout = ({
         <div className="w-full my-4 prose dark:prose-dark max-w-none">
           {children}
         </div>
+
+        <footer>
+          <ShareViaTwitter title={title} slug={slug} />
+        </footer>
       </article>
     </>
   );

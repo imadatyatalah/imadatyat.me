@@ -9,8 +9,8 @@ import NavLink from "./NavLink";
 const LINKS = [
   { title: "Home", href: "/" },
   { title: "Blog", href: "/blog" },
-  { title: "Projects", href: "/projects" },
   { title: "Guides", href: "/guides" },
+  { title: "Projects", href: "/projects" },
 ];
 
 const Header = () => {
