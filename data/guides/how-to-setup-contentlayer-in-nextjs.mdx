@@ -19,7 +19,9 @@ image: ""
 npm install contentlayer next-contentlayer
 ```
 
-### Create `contentlayer.config.js` file
+### Add your Contentlayer config
+
+Create `contentlayer.config.js` file in the root of the project with the following code.
 
 ```js:contentlayer.config.js
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
@@ -47,7 +49,7 @@ export default makeSource({
 });
 ```
 
-### Enable live-reload and build setup(Optional)
+### Set up Next.js plugin in `next.config.js` (optional: enables live-reload and build setup)
 
 ```js:next.config.js
 const { withContentlayer } = require("next-contentlayer");
@@ -59,9 +61,9 @@ module.exports = withContentlayer()({
 
 ### Add some posts
 
-1. Add `posts` folder in the root of your app
-2. Add `.md` files(e.g. `pre-rendering.md`)
-3. Add your content
+1. Add `posts` folder in the root of your app(Where your content will live).
+2. Add `.md` files(e.g. `pre-rendering.md`).
+3. Add your content(You can write anything you want, This is just an example).
 
 ```md:posts/pre-rendering.md
 ---
