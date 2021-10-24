@@ -2,13 +2,99 @@
 
 exports[`Home should match snapshot 1`] = `
 <section
-  class="flex items-center justify-center"
   data-testid="home-page"
 >
-  <h1
-    class="text-4xl font-semibold leading-relaxed tracking-tight"
+  <div
+    class="my-4"
   >
-    Work In Progress!
-  </h1>
+    <h2
+      class="text-2xl font-semibold"
+    >
+      Featured posts
+    </h2>
+    <div
+      class="flex flex-col items-center my-4 sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-3"
+    >
+      <a
+        href="/blog/why-i-started-octocake"
+      >
+        <article
+          class="max-w-sm my-8 sm:max-w-none sm:my-0 group"
+        >
+          <div
+            class="flex mb-2"
+          >
+            <div
+              style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+            >
+              <div
+                style="box-sizing: border-box; display: block; max-width: 100%;"
+              >
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI1MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
+                  style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
+                />
+              </div>
+              <img
+                alt="Why I started Octocake?"
+                class="rounded-lg"
+                data-nimg="intrinsic"
+                decoding="async"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+              />
+              <noscript />
+            </div>
+          </div>
+          <div>
+            <p
+              class="text-sm text-gray-600 dark:text-grey-400"
+            >
+              October 16, 2021
+            </p>
+            <h3
+              class="mt-1 mb-2 text-xl font-semibold lg:group-hover:text-fuchsia-700 lg:dark:group-hover:text-fuchsia-500 lg:transition-all"
+            >
+              Why I started Octocake?
+            </h3>
+            <p
+              class="text-gray-700 dark:text-grey-300"
+            >
+              Octocake is an open-source social platform created for developers.
+            </p>
+          </div>
+        </article>
+      </a>
+    </div>
+    <p>
+      <a
+        class="inline-flex text-gray-600 dark:text-gray-400 dark:hover:text-[#dedede]"
+        href="/blog"
+      >
+        <span
+          class="mr-1"
+        >
+          Read all posts
+        </span>
+         
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17 8l4 4m0 0l-4 4m4-4H3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+      </a>
+    </p>
+  </div>
 </section>
 `;

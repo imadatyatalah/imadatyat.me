@@ -9,7 +9,7 @@ describe("Home", () => {
     render(<Home />);
 
     const heading = screen.getByRole("heading", {
-      name: "Work In Progress!",
+      name: "Featured posts",
     });
 
     expect(heading).toBeInTheDocument();

@@ -15,7 +15,7 @@ const ShareViaTwitter = ({ title, slug }: { title: string; slug: string }) => {
     >
       <TwitterIcon />
 
-      <span className="ml-2">Share via Twitter</span>
+      <span className="ml-2 hover:underline">Share via Twitter</span>
     </a>
   );
 };
