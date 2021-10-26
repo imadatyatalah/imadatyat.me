@@ -9,12 +9,12 @@ import ArrowRight from "@/icons/ArrowRight";
 
 const featuredPosts = [
   {
-    slug: "why-i-started-octocake",
-    title: "Why I started Octocake?",
+    slug: "why-i-have-started-octocake",
+    title: "Why I have started Octocake?",
     summary:
       "Octocake is an open-source social platform created for developers.",
     publishedAt: "2021-10-16",
-    image: "/static/images/why-i-started-octocake/banner.png",
+    image: "/static/images/why-i-have-started-octocake/banner.png",
   },
 ];
 
