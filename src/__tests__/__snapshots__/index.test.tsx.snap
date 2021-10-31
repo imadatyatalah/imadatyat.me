@@ -7,6 +7,46 @@ exports[`Home should match snapshot 1`] = `
   <div
     class="my-4"
   >
+    <h1
+      class="mb-2 text-3xl font-bold"
+    >
+      Hey there, I'm Imad
+       
+      <span
+        aria-label="Waving Hand"
+        class="wave"
+        role="img"
+      >
+        👋
+      </span>
+    </h1>
+    <p>
+      I'm 
+      <span
+        class="font-semibold"
+      >
+        Imad Atyat-Alah
+      </span>
+      , A
+       
+      <span
+        class="font-semibold"
+      >
+        Self-taught
+      </span>
+       Full Stack JavaScript/TypeScript developer with passion for
+       
+      <span
+        class="font-semibold"
+      >
+        Front-End
+      </span>
+      . I enjoy working with TypeScript, React, Next.js, Prisma, TailwindCSS...
+    </p>
+  </div>
+  <div
+    class="my-4"
+  >
     <h2
       class="text-2xl font-semibold"
     >
@@ -16,7 +56,7 @@ exports[`Home should match snapshot 1`] = `
       class="flex flex-col items-center my-4 sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-3"
     >
       <a
-        href="/blog/why-i-started-octocake"
+        href="/blog/why-i-have-started-octocake"
       >
         <article
           class="max-w-sm my-8 sm:max-w-none sm:my-0 group"
@@ -24,21 +64,21 @@ exports[`Home should match snapshot 1`] = `
           <div
             class="flex mb-2"
           >
-            <div
-              style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+            <span
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
             >
-              <div
-                style="box-sizing: border-box; display: block; max-width: 100%;"
+              <span
+                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
               >
                 <img
                   alt=""
                   aria-hidden="true"
                   src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI1MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-                  style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
+                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                 />
-              </div>
+              </span>
               <img
-                alt="Why I started Octocake?"
+                alt="Why I have started Octocake?"
                 class="rounded-lg"
                 data-nimg="intrinsic"
                 decoding="async"
@@ -46,7 +86,7 @@ exports[`Home should match snapshot 1`] = `
                 style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
               />
               <noscript />
-            </div>
+            </span>
           </div>
           <div>
             <p
@@ -57,7 +97,7 @@ exports[`Home should match snapshot 1`] = `
             <h3
               class="mt-1 mb-2 text-xl font-semibold lg:group-hover:text-fuchsia-700 lg:dark:group-hover:text-fuchsia-500 lg:transition-all"
             >
-              Why I started Octocake?
+              Why I have started Octocake?
             </h3>
             <p
               class="text-gray-700 dark:text-grey-300"

@@ -33,11 +33,11 @@ const Home = () => {
           </h1>
 
           <p>
-            I&apos;m <span className="font-medium">Imad Atyat-Alah</span>, A{" "}
-            <span className="font-medium">Self-taught</span> Full Stack
+            I&apos;m <span className="font-semibold">Imad Atyat-Alah</span>, A{" "}
+            <span className="font-semibold">Self-taught</span> Full Stack
             JavaScript/TypeScript developer with passion for{" "}
-            <span className="font-medium">Front-End</span>. I enjoy working with
-            TypeScript, React, Next.js, Prisma, TailwindCSS...
+            <span className="font-semibold">Front-End</span>. I enjoy working
+            with TypeScript, React, Next.js, Prisma, TailwindCSS...
           </p>
         </div>
 
