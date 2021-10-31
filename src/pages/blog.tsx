@@ -13,7 +13,7 @@ const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
     <>
       <NextSeo
         title="Blog"
-        description="Friendly blog posts for developers. Especially about React, Next.js, and more!"
+        description="Thoughts on what I'm building and learning."
         canonical={`${baseUrl}/blog`}
       />
 

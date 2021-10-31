@@ -7,9 +7,10 @@ import Logo from "@/components/Logo";
 import NavLink from "./NavLink";
 
 const LINKS = [
+  { title: "Home", href: "/" },
   { title: "Blog", href: "/blog" },
   { title: "Guides", href: "/guides" },
-  { title: "Projects", href: "/projects" },
+  // { title: "Projects", href: "/projects" },
 ];
 
 const Header = () => {

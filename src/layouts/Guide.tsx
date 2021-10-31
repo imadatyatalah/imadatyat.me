@@ -11,7 +11,7 @@ const GuideLayout = ({
   children,
   guide,
 }: PropsWithChildren<{ guide: Guides }>) => {
-  const { title, image, description, slug } = guide;
+  const { title, image, description, slug, publishedAt } = guide;
 
   return (
     <>
@@ -21,8 +21,8 @@ const GuideLayout = ({
         canonical={`${baseUrl}/guides/${slug}`}
         openGraph={{
           type: "article",
-          article: { authors: [baseUrl] },
-          images: [{ url: `${baseUrl}${image}` }],
+          article: { publishedTime: publishedAt, authors: [baseUrl] },
+          images: [{ url: `${baseUrl}${image}`, height: 627, width: 1200 }],
         }}
       />
 

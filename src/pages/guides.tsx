@@ -11,7 +11,11 @@ import GuidePost from "@/components/GuidePost";
 const Guides = ({ guides }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
-      <NextSeo title="Guides" canonical={`${baseUrl}/guides`} />
+      <NextSeo
+        title="Guides"
+        description="A collection of helpfull guides, Mostly about web technologies like TypeScript, React, Next.js..."
+        canonical={`${baseUrl}/guides`}
+      />
 
       <section>
         <h1 className="text-3xl font-bold">Guides</h1>

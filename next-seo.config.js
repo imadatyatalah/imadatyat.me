@@ -1,7 +1,8 @@
 const NextSeo = {
   defaultTitle: "Imad Atyat-Alah",
   titleTemplate: "%s - Imad Atyat-Alah",
-  description: "Self-taught Full Stack JavaScript developer.",
+  description:
+    "Self-taught Full Stack JavaScript/TypeScript developer with passion for Front-End.",
 
   openGraph: {
     type: "website",

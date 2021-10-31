@@ -25,6 +25,23 @@ const Home = () => {
 
       <section data-testid="home-page">
         <div className="my-4">
+          <h1 className="mb-2 text-3xl font-bold">
+            Hey there, I&apos;m Imad{" "}
+            <span className="wave" role="img" aria-label="Waving Hand">
+              👋
+            </span>
+          </h1>
+
+          <p>
+            I&apos;m <span className="font-medium">Imad Atyat-Alah</span>, A{" "}
+            <span className="font-medium">Self-taught</span> Full Stack
+            JavaScript/TypeScript developer with passion for{" "}
+            <span className="font-medium">Front-End</span>. I enjoy working with
+            TypeScript, React, Next.js, Prisma, TailwindCSS...
+          </p>
+        </div>
+
+        <div className="my-4">
           <h2 className="text-2xl font-semibold">Featured posts</h2>
 
           <div className="flex flex-col items-center my-4 sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
