@@ -2,16 +2,13 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { Blog } from ".contentlayer/types";
 import dayjs from "dayjs";
 
-const BlogPost = ({
-  slug,
-  title,
-  summary,
-  publishedAt,
-  image,
-}: Pick<Blog, "title" | "summary" | "slug" | "publishedAt" | "image">) => {
+import type { Blog } from ".contentlayer/types";
+
+type Props = Pick<Blog, "title" | "summary" | "slug" | "publishedAt" | "image">;
+
+const BlogPost = ({ slug, title, summary, publishedAt, image }: Props) => {
   return (
     <Link href={`/blog/${slug}`}>
       <a>
@@ -33,7 +30,7 @@ const BlogPost = ({
               {dayjs(publishedAt).format("MMMM D, YYYY")}
             </p>
 
-            <h3 className="mt-1 mb-2 text-xl font-semibold lg:group-hover:text-fuchsia-700 lg:dark:group-hover:text-fuchsia-500 lg:transition-all">
+            <h3 className="mt-1 mb-2 text-xl font-medium title-hover">
               {title}
             </h3>
 
