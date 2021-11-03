@@ -10,6 +10,7 @@ module.exports = {
     "^@/icons/(.*)$": ["<rootDir>/src/icons/$1"],
     "^@/styles/(.*)$": ["<rootDir>/src/styles/$1"],
     "^@/layouts/(.*)$": ["<rootDir>/src/layouts/$1"],
+    "^@/modules/(.*)$": ["<rootDir>/src/modules/$1"],
     "^@/components/(.*)$": ["<rootDir>/src/components/$1"],
 
     /* Handle CSS imports (with CSS modules)

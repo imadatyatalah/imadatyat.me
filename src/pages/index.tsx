@@ -1,66 +1,35 @@
 import React from "react";
-import Link from "next/link";
+import type { InferGetStaticPropsType } from "next";
 
-import { NextSeo } from "next-seo";
+import { pick } from "@/lib/utils";
+import { allBlogs, allGuides } from ".contentlayer/data";
+import HomePage from "@/modules/HomePage";
 
-import { baseUrl } from "@/lib/constants";
-import BlogPost from "@/components/BlogPost";
-import ArrowRight from "@/icons/ArrowRight";
+const Home = ({
+  posts,
+  guides,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
+  return <HomePage posts={posts} guides={guides} />;
+};
 
-const featuredPosts = [
-  {
-    slug: "why-i-have-started-octocake",
-    title: "Why I have started Octocake?",
-    summary:
-      "Octocake is an open-source social platform created for developers.",
-    publishedAt: "2021-10-16",
-    image: "/static/images/why-i-have-started-octocake/banner.png",
-  },
-];
-
-const Home = () => {
-  return (
-    <>
-      <NextSeo title="Home" canonical={baseUrl} />
-
-      <section data-testid="home-page">
-        <div className="my-4">
-          <h1 className="mb-2 text-3xl font-bold">
-            Hey there, I&apos;m Imad{" "}
-            <span className="wave" role="img" aria-label="Waving Hand">
-              👋
-            </span>
-          </h1>
-
-          <p>
-            I&apos;m <span className="font-semibold">Imad Atyat-Alah</span>, A{" "}
-            <span className="font-semibold">Self-taught</span> Full Stack
-            JavaScript/TypeScript developer with passion for{" "}
-            <span className="font-semibold">Front-End</span>. I enjoy working
-            with TypeScript, React, Next.js, Prisma, TailwindCSS...
-          </p>
-        </div>
-
-        <div className="my-4">
-          <h2 className="text-2xl font-semibold">Featured posts</h2>
-
-          <div className="flex flex-col items-center my-4 sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
-            {featuredPosts.slice(0, 3).map((post) => (
-              <BlogPost key={post.slug} {...post} />
-            ))}
-          </div>
-
-          <p>
-            <Link href="/blog">
-              <a className="inline-flex text-gray-600 dark:text-gray-400 dark:hover:text-[#dedede]">
-                <span className="mr-1">Read all posts</span> <ArrowRight />
-              </a>
-            </Link>
-          </p>
-        </div>
-      </section>
-    </>
+export const getStaticProps = async () => {
+  const posts = allBlogs.map((post) =>
+    pick(post, ["slug", "title", "summary", "publishedAt", "image"])
   );
+
+  const sortedPosts = posts.sort(
+    (a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+  );
+
+  const guides = allGuides.map((guide) =>
+    pick(guide, ["slug", "title", "description", "publishedAt"])
+  );
+
+  const sortedGuides = guides.sort(
+    (a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+  );
+
+  return { props: { posts: sortedPosts, guides: sortedGuides } };
 };
 
 export default Home;
