@@ -20,7 +20,7 @@ const BlogLayout = ({ children, post }: PropsWithChildren<{ post: Blog }>) => {
         openGraph={{
           type: "article",
           article: { publishedTime: publishedAt, authors: [baseUrl] },
-          images: [{ url: `${baseUrl}${image}` }],
+          images: [{ url: `${baseUrl}${image}`, height: 627, width: 1200 }],
         }}
       />
 

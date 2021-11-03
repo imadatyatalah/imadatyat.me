@@ -18,7 +18,7 @@ const BlogPost = ({ slug, title, summary, publishedAt, image }: Props) => {
               <Image
                 src={image}
                 width="1200"
-                height="500"
+                height="627"
                 alt={title}
                 className="rounded-lg"
               />
