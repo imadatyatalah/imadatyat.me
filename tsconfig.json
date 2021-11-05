@@ -5,6 +5,7 @@
       "@/lib/*": ["src/lib/*"],
       "@/pages/*": ["src/pages/*"],
       "@/icons/*": ["src/icons/*"],
+      "@/hooks/*": ["src/hooks/*"],
       "@/styles/*": ["src/styles/*"],
       "@/modules/*": ["src/modules/*"],
       "@/layouts/*": ["src/layouts/*"],

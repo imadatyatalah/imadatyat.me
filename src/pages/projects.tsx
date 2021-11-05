@@ -5,7 +5,7 @@ import { NextSeo } from "next-seo";
 import { projects, tags } from "data/projects";
 import { baseUrl } from "@/lib/constants";
 import ProjectCard from "@/components/ProjectsCard";
-import useTags from "src/hooks/useTags";
+import useTags from "@/hooks/useTags";
 
 const Projects = () => {
   const [data, setCurrentTag] = useTags(projects);
