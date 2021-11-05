@@ -12,6 +12,7 @@ const NextSeo = {
 
   twitter: {
     handle: "@ImadAtyat",
+    site: "@imadatyatalah",
     cardType: "summary_large_image",
   },
 };
