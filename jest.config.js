@@ -8,6 +8,7 @@ module.exports = {
     "^@/lib/(.*)$": ["<rootDir>/src/lib/$1"],
     "^@/pages/(.*)$": ["<rootDir>/src/pages/$1"],
     "^@/icons/(.*)$": ["<rootDir>/src/icons/$1"],
+    "^@/hooks/(.*)$": ["<rootDir>/src/hooks/$1"],
     "^@/styles/(.*)$": ["<rootDir>/src/styles/$1"],
     "^@/layouts/(.*)$": ["<rootDir>/src/layouts/$1"],
     "^@/modules/(.*)$": ["<rootDir>/src/modules/$1"],
