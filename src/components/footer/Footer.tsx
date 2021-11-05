@@ -28,6 +28,8 @@ const Footer = () => {
       <div className="flex items-center justify-center pb-4">
         {SOCIAL_LINKS.map(({ title, href, icon: Icon }) => (
           <a
+            aria-label={title}
+            title={title}
             className="mx-1"
             href={href}
             target="_blank"
