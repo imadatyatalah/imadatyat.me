@@ -2,32 +2,12 @@ import React from "react";
 import type { InferGetStaticPropsType } from "next";
 
 import { allGuides } from ".contentlayer/data";
-import { NextSeo } from "next-seo";
 
-import { baseUrl } from "@/lib/constants";
 import { pick } from "@/lib/utils";
-import GuidePost from "@/components/GuidePost";
+import GuidesPage from "@/modules/GuidesPage";
 
 const Guides = ({ guides }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  return (
-    <>
-      <NextSeo
-        title="Guides"
-        description="A collection of helpfull guides, Mostly about web technologies like TypeScript, React, Next.js..."
-        canonical={`${baseUrl}/guides`}
-      />
-
-      <section>
-        <h1 className="text-3xl font-bold">Guides</h1>
-
-        <div className="my-4">
-          {guides.map((guide) => (
-            <GuidePost key={guide.slug} {...guide} />
-          ))}
-        </div>
-      </section>
-    </>
-  );
+  return <GuidesPage guides={guides} />;
 };
 
 export const getStaticProps = async () => {

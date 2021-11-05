@@ -8,5 +8,6 @@ const { withContentlayer } = require("next-contentlayer");
  **/
 module.exports = withContentlayer()({
   reactStrictMode: true,
+  swcMinify: true,
   redirects: require("./next-redirects"),
 });
