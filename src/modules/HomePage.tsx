@@ -29,7 +29,7 @@ const HomePage = ({ posts, guides }: Props) => {
     <>
       <NextSeo title="Home" canonical={baseUrl} />
 
-      <section data-testid="home-page">
+      <section>
         <div className="my-4">
           <h1 className="mb-2 text-3xl font-bold">
             Hey there, I&apos;m Imad{" "}
