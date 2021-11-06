@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: Install dependencies, Build, lint, and test on Node.js ${{ matrix.node-version }}
+    name: Install dependencies, Build, and lint on Node.js ${{ matrix.node-version }}
 
     runs-on: ubuntu-latest
 
@@ -32,6 +32,3 @@ jobs:
 
       - name: Run lint
         run: npm run lint
-
-      - name: Run tests
-        run: npm run test:ci
