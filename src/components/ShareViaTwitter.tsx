@@ -11,9 +11,9 @@ const ShareViaTwitter = ({ title, slug }: { title: string; slug: string }) => {
       href={tweetShareURL}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center text-fuchsia-500 fill-[#D946EF]"
+      className="flex text-sm items-center text-fuchsia-500 fill-[#D946EF]"
     >
-      <TwitterIcon />
+      <TwitterIcon width={22} height={22} />
 
       <span className="ml-2 hover:underline">Share via Twitter</span>
     </a>
