@@ -7,6 +7,7 @@ import {
 import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
 import readingTime from "reading-time";
 import remarkGfm from "remark-gfm";
+import remarkToc from "remark-toc";
 import rehypeSlug from "rehype-slug";
 import rehypeCodeTitles from "rehype-code-titles";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
@@ -56,7 +57,7 @@ const contentLayerConfig = makeSource({
   contentDirPath: "data",
   documentTypes: [Blog, Guides],
   mdx: {
-    remarkPlugins: [remarkGfm],
+    remarkPlugins: [remarkGfm, remarkToc],
     rehypePlugins: [
       rehypeAccessibleEmojis,
       rehypeSlug,

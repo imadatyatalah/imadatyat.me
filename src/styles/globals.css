@@ -119,6 +119,14 @@
   box-shadow: 0 0 10px #a42cd6, 0 0 5px #a42cd6 !important;
 }
 
+.prose ul li :last-child {
+  @apply mb-0;
+}
+
+.prose ul li :first-child {
+  @apply mt-0;
+}
+
 .prose .anchor {
   @apply absolute invisible;
 
