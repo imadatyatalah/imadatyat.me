@@ -39,6 +39,12 @@ module.exports = {
             blockquote: {
               color: theme("colors.grey.600"),
             },
+            "> ul > li > *:first-child": {
+              marginTop: 0,
+            },
+            "> ul > li > *:last-child": {
+              marginBottom: 0,
+            },
             thead: {
               borderBottomColor: theme("colors.gray.200"),
             },
