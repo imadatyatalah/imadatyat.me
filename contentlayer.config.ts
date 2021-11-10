@@ -55,8 +55,6 @@ const Guides = defineDocumentType(() => ({
 
 const contentLayerConfig = makeSource({
   contentDirPath: "data",
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
   documentTypes: [Blog, Guides],
   mdx: {
     remarkPlugins: [remarkGfm, remarkToc],
