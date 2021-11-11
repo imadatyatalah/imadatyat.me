@@ -15,10 +15,17 @@ const LINKS = [
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isStickyNav, setIsStickyNav] = useState(false);
 
   useEffect(() => {
-    return function cleanup() {
+    const listener = () =>
+      window.scrollY > 150 ? setIsStickyNav(true) : setIsStickyNav(false);
+
+    window.addEventListener("scroll", listener);
+
+    return () => {
       document.body.style.overflow = "";
+      window.removeEventListener("scroll", listener);
     };
   }, []);
 
@@ -42,18 +49,22 @@ const Header = () => {
       : "hidden md:block"
   );
 
+  const headerClassName = cn(
+    "flex items-center justify-between h-[70px] transition-all",
+    isStickyNav
+      ? "fixed top-0 right-0 left-0 z-50 sticky-nav shadow-2xl"
+      : "relative"
+  );
+
   return (
-    <header
-      className="relative flex items-center justify-between h-[70px]"
-      id="global-header"
-    >
+    <header className={headerClassName} id="global-header">
       <Logo />
 
       <nav className={navClassName}>
         <ul className="flex flex-col md:flex-row">
           {LINKS.map(({ title, href }) => (
             <li
-              className="mt-6 ml-8 border-b dark:border-gray-700 md:mt-0 md:border-none"
+              className="mx-8 mt-6 border-b dark:border-gray-700 md:mt-0 md:mr-0 md:border-none"
               onClick={closeMenu}
               key={title}
             >
