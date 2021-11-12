@@ -105,6 +105,18 @@
   }
 }
 
+.sticky-nav {
+  background: rgba(9, 1, 23, 0.75);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+}
+
+@supports not (backdrop-filter: none) {
+  .sticky-nav {
+    @apply bg-[#090117] bg-opacity-100 backdrop-filter-none;
+  }
+}
+
 #nprogress {
   position: relative;
   z-index: 9999999;
@@ -117,14 +129,6 @@
 
 #nprogress .peg {
   box-shadow: 0 0 10px #a42cd6, 0 0 5px #a42cd6 !important;
-}
-
-.prose ul li :last-child {
-  @apply mb-0;
-}
-
-.prose ul li :first-child {
-  @apply mt-0;
 }
 
 .prose .anchor {
