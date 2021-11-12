@@ -50,9 +50,9 @@ const Header = () => {
   );
 
   const headerClassName = cn(
-    "flex items-center justify-between h-[70px] transition-all",
+    "flex items-center justify-between h-[70px]",
     isStickyNav
-      ? "fixed top-0 right-0 left-0 z-50 sticky-nav shadow-2xl"
+      ? "fixed top-0 right-0 left-0 z-50 sticky-nav shadow-2xl border-b border-gray-600"
       : "relative"
   );
 
