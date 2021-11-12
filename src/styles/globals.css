@@ -105,6 +105,18 @@
   }
 }
 
+.sticky-nav {
+  background: rgba(9, 1, 23, 0.75);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+}
+
+@supports not (backdrop-filter: none) {
+  .sticky-nav {
+    @apply bg-[#090117] bg-opacity-100 backdrop-filter-none;
+  }
+}
+
 #nprogress {
   position: relative;
   z-index: 9999999;
