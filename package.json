@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "classnames": "^2.3.1",
-    "contentlayer": "^0.0.27",
+    "contentlayer": "^0.0.31",
     "dayjs": "^1.10.7",
     "esbuild": "^0.13.12",
     "mdx-bundler": "^6.0.2",
