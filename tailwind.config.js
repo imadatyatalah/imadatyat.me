@@ -1,5 +1,5 @@
 /* eslint @typescript-eslint/no-var-requires: "off" */
-const { fontFamily } = require("tailwindcss/defaultTheme");
+const { fontFamily, spacing } = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 
 module.exports = {
@@ -39,11 +39,10 @@ module.exports = {
             blockquote: {
               color: theme("colors.grey.600"),
             },
-            "> ul > li > *:first-child": {
-              marginTop: 0,
-            },
-            "> ul > li > *:last-child": {
-              marginBottom: 0,
+            "> ul > li > *:first-child": { marginTop: 0 },
+            "> ul > li > *:last-child": { marginBottom: 0 },
+            "h2,h3,h4": {
+              "scroll-margin-top": spacing[36],
             },
             thead: {
               borderBottomColor: theme("colors.gray.200"),
@@ -66,6 +65,7 @@ module.exports = {
               color: theme("colors.gray.300"),
             },
             "h2,h3,h4": {
+              "scroll-margin-top": spacing[36],
               color: theme("colors.gray.100"),
             },
             hr: { borderColor: theme("colors.gray.700") },

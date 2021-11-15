@@ -7,7 +7,7 @@ const NextSeo = {
   openGraph: {
     type: "website",
     url: "https://imadatyatalah.vercel.app",
-    site_name: "imadatyatalah",
+    site_name: "Imad Atyat-Alah",
   },
 
   twitter: {
