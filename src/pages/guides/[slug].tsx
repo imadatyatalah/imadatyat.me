@@ -1,7 +1,7 @@
-import React, { useMemo } from "react";
+import React from "react";
 import type { GetStaticPaths, GetStaticProps } from "next";
 
-import { getMDXComponent } from "mdx-bundler/client";
+import { useMDXComponent } from "next-contentlayer/hooks";
 import { allGuides } from ".contentlayer/data";
 import type { Guides } from ".contentlayer/types";
 
@@ -9,10 +9,7 @@ import MDXComponents from "@/components/MDXComponents";
 import GuideLayout from "@/layouts/Guide";
 
 const Guide = ({ guide }: { guide: Guides }) => {
-  const Component = useMemo(
-    () => getMDXComponent(guide.body.code),
-    [guide.body.code]
-  );
+  const Component = useMDXComponent(guide.body.code);
 
   return (
     <GuideLayout guide={guide}>

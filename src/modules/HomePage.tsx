@@ -34,7 +34,7 @@ const HomePage = ({ posts, guides }: Props) => {
           <h1 className="mb-2 text-3xl font-bold">
             Hey there, I&apos;m Imad{" "}
             <span className="wave" role="img" aria-label="Waving Hand">
-              👋
+              👋🏼
             </span>
           </h1>
 
