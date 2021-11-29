@@ -7,6 +7,7 @@ import dayjs from "dayjs";
 
 import { baseUrl } from "@/lib/constants";
 import ShareViaTwitter from "@/components/ShareViaTwitter";
+import ViewCounter from "@/components/ViewCounter";
 
 const BlogLayout = ({ children, post }: PropsWithChildren<{ post: Blog }>) => {
   const { title, publishedAt, readingTime, image, summary, slug } = post;
@@ -33,7 +34,10 @@ const BlogLayout = ({ children, post }: PropsWithChildren<{ post: Blog }>) => {
           <div className="text-sm md:flex md:justify-between md:w-full">
             <p>Imad Atyat-Alah / {dayjs(publishedAt).format("MMMM D, YYYY")}</p>
 
-            <p>{readingTime.text}</p>
+            <p>
+              {readingTime.text} {` • `}
+              <ViewCounter slug={slug} />
+            </p>
           </div>
         </header>
 

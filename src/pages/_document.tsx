@@ -12,7 +12,10 @@ class MyDocument extends Document {
             <script async src="https://cdn.splitbee.io/sb.js"></script>
           ) : null}
 
-          <meta name="google-site-verification" content="J3GXVYPGqR-UnaYIC2CVLE1MJUbW3mBbLnYtNfJZwNU" />
+          <meta
+            name="google-site-verification"
+            content="J3GXVYPGqR-UnaYIC2CVLE1MJUbW3mBbLnYtNfJZwNU"
+          />
 
           <link
             rel="preload"

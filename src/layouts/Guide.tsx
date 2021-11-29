@@ -1,11 +1,13 @@
 import React from "react";
 import type { PropsWithChildren } from "react";
 
-import type { Guides } from ".contentlayer/types";
 import { NextSeo } from "next-seo";
 
 import { baseUrl } from "@/lib/constants";
 import ShareViaTwitter from "@/components/ShareViaTwitter";
+import ViewCounter from "@/components/ViewCounter";
+
+import type { Guides } from ".contentlayer/types";
 
 const GuideLayout = ({
   children,
@@ -37,8 +39,14 @@ const GuideLayout = ({
           {children}
         </div>
 
-        <footer>
-          <ShareViaTwitter title={title} slug={slug} />
+        <footer className="flex justify-between w-full mt-8 font-medium">
+          <div>
+            <ShareViaTwitter title={title} slug={slug} />
+          </div>
+
+          <div>
+            <ViewCounter slug={slug} />
+          </div>
         </footer>
       </article>
     </>
