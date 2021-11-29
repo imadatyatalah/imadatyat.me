@@ -46,7 +46,7 @@
     "husky": "^7.0.4",
     "lint-staged": "^11.2.6",
     "next-sitemap": "^1.6.203",
-    "postcss": "^8.3.11",
+    "postcss": "^8.4.4",
     "prettier": "2.4.1",
     "rehype-accessible-emojis": "^0.3.2",
     "tailwindcss": "^2.2.19",
