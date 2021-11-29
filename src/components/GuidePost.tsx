@@ -1,13 +1,20 @@
 import React from "react";
 import Link from "next/link";
 
+import useSWR from "swr";
 import dayjs from "dayjs";
 
+import fetcher from "@/lib/fetcher";
+
 import type { Guides } from ".contentlayer/types";
+import type { Views } from "@/types/Views";
 
 type Props = Pick<Guides, "title" | "description" | "slug" | "publishedAt">;
 
 const GuidePost = ({ title, description, slug, publishedAt }: Props) => {
+  const { data } = useSWR<Views>(`/api/views/${slug}`, fetcher);
+  const views = data?.total;
+
   return (
     <Link href={`/guides/${slug}`}>
       <a>
@@ -19,6 +26,8 @@ const GuidePost = ({ title, description, slug, publishedAt }: Props) => {
 
             <p className="mb-2 text-sm text-left text-gray-500 dark:text-grey-400 md:text-right md:mb-0">
               {dayjs(publishedAt).format("MMMM D, YYYY")}
+              {` • `}
+              {views} views
             </p>
           </div>
 

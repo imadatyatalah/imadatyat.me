@@ -2,13 +2,20 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import useSWR from "swr";
 import dayjs from "dayjs";
 
+import fetcher from "@/lib/fetcher";
+
 import type { Blog } from ".contentlayer/types";
+import type { Views } from "@/types/Views";
 
 type Props = Pick<Blog, "title" | "summary" | "slug" | "publishedAt" | "image">;
 
 const BlogPost = ({ slug, title, summary, publishedAt, image }: Props) => {
+  const { data } = useSWR<Views>(`/api/views/${slug}`, fetcher);
+  const views = data?.total;
+
   return (
     <Link href={`/blog/${slug}`}>
       <a>
@@ -27,7 +34,8 @@ const BlogPost = ({ slug, title, summary, publishedAt, image }: Props) => {
 
           <div>
             <p className="text-sm text-gray-600 dark:text-grey-400">
-              {dayjs(publishedAt).format("MMMM D, YYYY")}
+              {dayjs(publishedAt).format("MMMM D, YYYY")} {` • `}
+              {views} views
             </p>
 
             <h3 className="mt-1 mb-2 text-xl font-medium title-hover">
