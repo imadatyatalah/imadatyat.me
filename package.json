@@ -39,7 +39,7 @@
     "lint-staged": "^11.2.6",
     "next-sitemap": "^1.6.203",
     "postcss": "^8.4.4",
-    "prettier": "2.5.0",
+    "prettier": "2.5.1",
     "prisma": "^3.5.0",
     "reading-time": "^1.5.0",
     "rehype-accessible-emojis": "^0.3.2",
