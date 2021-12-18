@@ -167,7 +167,8 @@
 }
 
 .prose pre code {
-  @apply text-gray-800 dark:text-gray-200;
+  @apply p-0 text-gray-800 dark:text-gray-200;
+  border: initial;
 }
 
 .prose img {

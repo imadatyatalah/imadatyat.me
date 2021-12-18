@@ -1,10 +1,8 @@
-/* eslint @typescript-eslint/no-var-requires: "off" */
 const { fontFamily, spacing } = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  mode: "jit",
-  purge: ["./src/**/**/*.{jsx,tsx}"],
+  content: ["./src/**/**/*.{jsx,tsx}"],
   darkMode: "class",
   theme: {
     extend: {
@@ -25,8 +23,7 @@ module.exports = {
           800: "#222222",
           900: "#111111",
         },
-        grey: colors.gray,
-        fuchsia: colors.fuchsia,
+        grey: colors.slate,
       },
 
       typography: (theme) => ({
@@ -93,9 +90,6 @@ module.exports = {
         },
       }),
     },
-  },
-  variants: {
-    typography: ["dark"],
   },
   plugins: [require("@tailwindcss/typography")],
 };
