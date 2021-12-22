@@ -1,13 +1,14 @@
 import React from "react";
+import type { NextPage } from "next";
 
 import { NextSeo } from "next-seo";
 
 import { projects, tags } from "data/projects";
 import { baseUrl } from "@/lib/constants";
-import ProjectCard from "@/components/ProjectsCard";
+import ProjectCard from "@/components/ProjectCard";
 import useTags from "@/hooks/useTags";
 
-const Projects = () => {
+const Projects: NextPage = () => {
   const [data, setCurrentTag] = useTags(projects);
 
   return (

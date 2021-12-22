@@ -1,12 +1,14 @@
 import React from "react";
-import type { InferGetStaticPropsType } from "next";
+import type { InferGetStaticPropsType, NextPage } from "next";
 
 import { allBlogs } from ".contentlayer/data";
 
 import { pick } from "@/lib/utils";
 import BlogPage from "@/modules/BlogPage";
 
-const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
+type Props = InferGetStaticPropsType<typeof getStaticProps>;
+
+const Blog: NextPage<Props> = ({ posts }) => {
   return <BlogPage posts={posts} />;
 };
 

@@ -1,8 +1,9 @@
 import React from "react";
+import type { NextPage } from "next";
 
 import { NextSeo } from "next-seo";
 
-const Custom404 = () => (
+const Custom404: NextPage = () => (
   <>
     <NextSeo title="404" />
 

@@ -1,5 +1,5 @@
 import React from "react";
-import type { GetStaticPaths, GetStaticProps } from "next";
+import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { allGuides } from ".contentlayer/data";
@@ -8,7 +8,9 @@ import type { Guides } from ".contentlayer/types";
 import MDXComponents from "@/components/MDXComponents";
 import GuideLayout from "@/layouts/Guide";
 
-const Guide = ({ guide }: { guide: Guides }) => {
+type Props = { guide: Guides };
+
+const Guide: NextPage<Props> = ({ guide }) => {
   const Component = useMDXComponent(guide.body.code);
 
   return (

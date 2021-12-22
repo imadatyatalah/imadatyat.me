@@ -1,12 +1,14 @@
 import React from "react";
-import type { InferGetStaticPropsType } from "next";
+import type { InferGetStaticPropsType, NextPage } from "next";
 
 import { allGuides } from ".contentlayer/data";
 
 import { pick } from "@/lib/utils";
 import GuidesPage from "@/modules/GuidesPage";
 
-const Guides = ({ guides }: InferGetStaticPropsType<typeof getStaticProps>) => {
+type Props = InferGetStaticPropsType<typeof getStaticProps>;
+
+const Guides: NextPage<Props> = ({ guides }) => {
   return <GuidesPage guides={guides} />;
 };
 
