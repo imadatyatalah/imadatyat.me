@@ -1,0 +1,180 @@
+---
+title: Schema Validation with Zod and Express.js
+publishedAt: "2021-12-20"
+description: Validate your Express.js REST API Calls using Zod
+image: "/static/guides/schema-validation-with-zod-and-expressjs/banner.png"
+---
+
+## Table of contents
+
+## What is Zod?
+
+[Zod](https://github.com/colinhacks/zod) is a TypeScript-first schema declaration and validation library,
+Created by [Colin McDonnell](https://twitter.com/colinhacks).
+Unlike [Yup](https://github.com/jquense/yup),
+Zod is TypeScript-first which means it has a lot of features for TypeScript developers.
+
+Zod comes with some really great features like:
+
+- Works in Node.js and browsers (including IE 11)
+- Zero dependencies
+- Works with JavaScript too
+
+## Why you need to validate your API Calls?
+
+Validating your API Calls helps you getting the right data that you want,
+For example you want your users to have a strong password(e.g. atleast 6 characters),
+You can use something like Zod or Yup and prevent users from entering a short password(less than 6 characters).
+Also doing validation on the server makes you server much secure,
+Because no one can open the developer tools and go through your code and figure out how to beat your validation.
+
+## Let's start coding
+
+First, Create an empty directory and navigate into it:
+
+```bash
+mkdir schema-validation-with-zod-and-expressjs
+cd schema-validation-with-zod-and-expressjs
+```
+
+Then, Initialize a Node.js project and add the necessary dependencies:
+
+```bash
+npm init -y
+npm install express zod
+```
+
+Next let's add the following script to our `package.json` file.
+
+```json:package.json
+{
+  // ...
+  "scripts": {
+    "dev": "node index.js"
+  },
+  // ...
+}
+```
+
+Now let's start an Express.js server.
+
+```js:index.js
+const express = require("express");
+
+const app = express();
+
+app.use(express.json());
+
+app.listen(1337, () => console.log(`> Ready on http://localhost:${1337}`));
+```
+
+Then run the Express.js server(You can access it at [`http://localhost:1337`](http://localhost:1337)).
+
+```bash
+npm run dev
+```
+
+Next we can start working with Zod,
+Let's first import `z` from `zod` and add a simple login schema.
+
+```js:index.js {2,8-16}
+const express = require("express");
+const { z } = require("zod");
+
+const app = express();
+
+app.use(express.json());
+
+const LoginSchema = z.object({
+  // In this example we will only validate the request body.
+  body: z.object({
+    // email should be valid and non-empty
+    email: z.string().nonempty("Email is required").email(),
+    // password should be atleast 6 characters
+    password: z.string().nonempty("Password is required.").min(6),
+  }),
+});
+
+// ...
+```
+
+Now we are going to create our middleware for Zod validation.
+
+```js:index.js
+// ...
+
+const validate = (schema) => (req, res, next) => {
+  try {
+    schema.parse({
+      body: req.body,
+      query: req.query,
+      params: req.params,
+    });
+
+    next();
+  } catch (err) {
+    return res.status(400).send(err.errors);
+  }
+};
+
+// ...
+```
+
+Finally, we are going to create a route(`/login`) for `POST` requests,
+which we will use our middleware(`validate`) to perform the validation of the request body.
+
+```js:index.js
+// ...
+
+// pass LoginSchema to validate middleware
+app.post("/login", validate(LoginSchema), (req, res) => {
+  return res.json({ ...req.body });
+});
+
+// ...
+```
+
+The final code would be as follows:
+
+```js:index.js
+const express = require("express");
+const { z } = require("zod");
+
+const app = express();
+
+app.use(express.json());
+
+const LoginSchema = z.object({
+  body: z.object({
+    email: z.string().nonempty("Email is required").email(),
+    password: z.string().nonempty("Password is required.").min(6),
+  }),
+});
+
+const validate = (schema) => (req, res, next) => {
+  try {
+    schema.parse({
+      body: req.body,
+      query: req.query,
+      params: req.params,
+    });
+
+    next();
+  } catch (err) {
+    return res.status(400).send(err.errors);
+  }
+};
+
+app.post("/login", validate(LoginSchema), (req, res) => {
+  return res.json({ ...req.body });
+});
+
+app.listen(1337, () => console.log(`> Ready on http://localhost:${1337}`));
+```
+
+## Conclusion
+
+In this guide, We learned about how we can validate our Express.js REST API Calls using Zod,
+You can find the code on [GitHub](https://github.com/imadatyatalah/schema-validation-with-zod-and-expressjs-guide).
+
+Make sure to [contact me](https://twitter.com/ImadAtyat) if you have any questions.
