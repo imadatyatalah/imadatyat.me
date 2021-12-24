@@ -2,8 +2,8 @@ import React from "react";
 import type { InferGetStaticPropsType, NextPage } from "next";
 
 import { allBlogs } from ".contentlayer/data";
+import { pick } from "@contentlayer/client";
 
-import { pick } from "@/lib/utils";
 import BlogPage from "@/modules/BlogPage";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
