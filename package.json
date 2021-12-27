@@ -13,7 +13,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@prisma/client": "^3.6.0",
+    "@prisma/client": "^3.7.0",
     "classnames": "^2.3.1",
     "contentlayer": "^0.0.33",
     "dayjs": "^1.10.7",
