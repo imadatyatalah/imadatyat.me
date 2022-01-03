@@ -36,7 +36,7 @@
     "eslint": "7",
     "eslint-config-next": "^12.0.7",
     "husky": "^7.0.4",
-    "lint-staged": "^11.2.6",
+    "lint-staged": "^12.1.5",
     "next-sitemap": "^1.6.203",
     "postcss": "^8.4.5",
     "prettier": "^2.5.1",
