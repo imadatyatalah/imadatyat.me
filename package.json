@@ -43,7 +43,7 @@
     "prisma": "^3.6.0",
     "reading-time": "^1.5.0",
     "rehype-accessible-emojis": "^0.3.2",
-    "rehype-autolink-headings": "^6.1.0",
+    "rehype-autolink-headings": "^6.1.1",
     "rehype-code-titles": "^1.0.3",
     "rehype-prism-plus": "^1.1.3",
     "rehype-slug": "^5.0.0",
