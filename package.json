@@ -40,7 +40,7 @@
     "next-sitemap": "^1.6.203",
     "postcss": "^8.4.5",
     "prettier": "^2.5.1",
-    "prisma": "^3.6.0",
+    "prisma": "^3.8.1",
     "reading-time": "^1.5.0",
     "rehype-accessible-emojis": "^0.3.2",
     "rehype-autolink-headings": "^6.1.0",
