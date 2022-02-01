@@ -1,12 +1,10 @@
 const { withContentlayer } = require("next-contentlayer");
 
-// @ts-check
-
-/**
- * @type {import('next').NextConfig}
- **/
-module.exports = withContentlayer()({
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   redirects: require("./next-redirects"),
-});
+};
+
+module.exports = withContentlayer()(nextConfig);
