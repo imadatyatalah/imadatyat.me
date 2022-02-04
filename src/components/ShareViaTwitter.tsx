@@ -3,8 +3,16 @@ import React from "react";
 import { baseUrl } from "@/lib/constants";
 import TwitterIcon from "@/icons/TwitterIcon";
 
-const ShareViaTwitter = ({ title, slug }: { title: string; slug: string }) => {
-  const tweetShareURL = `https://twitter.com/intent/tweet?text=Check out: ${title}&url=${baseUrl}/blog/${slug}%0D%0A&via=ImadAtyat`;
+const ShareViaTwitter = ({
+  title,
+  slug,
+  type,
+}: {
+  title: string;
+  slug: string;
+  type: "blog" | "guides";
+}) => {
+  const tweetShareURL = `https://twitter.com/intent/tweet?text=Check out: ${title}&url=${baseUrl}/${type}/${slug}%0D%0A&via=ImadAtyat`;
 
   return (
     <a

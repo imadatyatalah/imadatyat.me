@@ -46,7 +46,7 @@ const BlogLayout = ({ children, post }: PropsWithChildren<{ post: Blog }>) => {
         </div>
 
         <footer>
-          <ShareViaTwitter title={title} slug={slug} />
+          <ShareViaTwitter title={title} slug={slug} type="blog" />
         </footer>
       </article>
     </>

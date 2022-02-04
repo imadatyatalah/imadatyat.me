@@ -15,7 +15,7 @@ const Guide: NextPage<Props> = ({ guide }) => {
 
   return (
     <GuideLayout guide={guide}>
-      <Component components={{ ...MDXComponents } as any} />
+      <Component components={{ ...MDXComponents }} />
     </GuideLayout>
   );
 };

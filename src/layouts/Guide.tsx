@@ -41,7 +41,7 @@ const GuideLayout = ({
 
         <footer className="flex justify-between w-full mt-8 font-medium">
           <div>
-            <ShareViaTwitter title={title} slug={slug} />
+            <ShareViaTwitter title={title} slug={slug} type="guides" />
           </div>
 
           <div>

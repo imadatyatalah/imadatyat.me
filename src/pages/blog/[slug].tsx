@@ -15,7 +15,7 @@ const Post: NextPage<Props> = ({ post }) => {
 
   return (
     <BlogLayout post={post}>
-      <Component components={{ ...MDXComponents } as any} />
+      <Component components={{ ...MDXComponents }} />
     </BlogLayout>
   );
 };

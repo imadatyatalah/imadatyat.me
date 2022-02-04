@@ -32,7 +32,7 @@ const Projects: NextPage = () => {
 
         <div className="flex flex-col items-center my-4 sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
           {data.length ? (
-            data.map((project: any, index: any) => (
+            data.map((project: any, index: number) => (
               <ProjectCard {...project} key={index} />
             ))
           ) : (
