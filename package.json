@@ -19,7 +19,7 @@
     "dayjs": "^1.10.7",
     "next": "^12.0.10",
     "next-contentlayer": "^0.0.34",
-    "next-seo": "^5.0.0",
+    "next-seo": "^5.1.0",
     "next-themes": "^0.0.15",
     "nprogress": "^0.2.0",
     "react": "17.0.2",
