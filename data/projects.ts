@@ -7,6 +7,7 @@ import statsPreviewCardComponent from "public/static/projects/stats-preview-card
 import sunnysideAgencyLandingPage from "public/static/projects/sunnyside-agency-landing-page.jpg";
 import testimonialsGridSection from "public/static/projects/testimonials-grid-section.jpg";
 import urlShorteningApi from "public/static/projects/url-shortening-api.jpg";
+import QRCodeComponent from "public/static/projects/qr-code-component.jpg";
 import octocake from "public/static/projects/octocake.png";
 
 // Frontend Mentor challenges repository
@@ -110,6 +111,13 @@ export const projects: Project[] = [
     repo: `${challengesRepo}/url-shortening-api`,
     live: "https://url-shortening-api-imadatyatalah.vercel.app",
     image: urlShorteningApi,
+  },
+  {
+    title: "QR code component",
+    tags: ["frontend-mentor", "front-end", "HTML & CSS"],
+    repo: `${challengesRepo}/qr-code-component-main`,
+    live: "https://qr-code-component-imadatyatalah.netlify.app/",
+    image: QRCodeComponent,
   },
 
   {
