@@ -1,6 +1,12 @@
 {
   "name": "Imad Atyat-Alah",
   "short_name": "Imad Atyat",
+  "description": "I'm Imad Atyat-Alah, A Self-taught Full Stack JavaScript/TypeScript developer with passion for Front-End.",
+  "theme_color": "#090117",
+  "background_color": "#A21CAF",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -12,8 +18,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "theme_color": "#090117",
-  "background_color": "#A21CAF",
-  "display": "standalone"
+  ]
 }

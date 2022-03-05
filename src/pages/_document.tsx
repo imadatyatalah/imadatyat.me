@@ -41,6 +41,7 @@ const Document = () => {
           href="/static/favicon/favicon-16x16.png"
         />
         <link rel="manifest" href="/static/favicon/site.webmanifest" />
+        <meta name="theme-color" content="#090117" />
       </Head>
       <body className="text-[#090117] bg-[#f7f9fb] dark:bg-[#090117] dark:text-[#dedede]">
         <Main />
