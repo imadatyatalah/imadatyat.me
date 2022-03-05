@@ -2,8 +2,8 @@ import React from "react";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
 import { useMDXComponent } from "next-contentlayer/hooks";
-import { allBlogs } from ".contentlayer/data";
-import type { Blog } from ".contentlayer/types";
+import { allBlogs } from "contentlayer/generated";
+import type { Blog } from "contentlayer/generated";
 
 import MDXComponents from "@/components/MDXComponents";
 import BlogLayout from "@/layouts/Blog";

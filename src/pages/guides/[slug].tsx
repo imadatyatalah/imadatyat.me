@@ -2,8 +2,8 @@ import React from "react";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
 import { useMDXComponent } from "next-contentlayer/hooks";
-import { allGuides } from ".contentlayer/data";
-import type { Guides } from ".contentlayer/types";
+import { allGuides } from "contentlayer/generated";
+import type { Guides } from "contentlayer/generated";
 
 import MDXComponents from "@/components/MDXComponents";
 import GuideLayout from "@/layouts/Guide";

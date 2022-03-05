@@ -8,6 +8,7 @@ import NavLink from "./NavLink";
 
 const LINKS = [
   { title: "Home", href: "/" },
+  { title: "About", href: "/about" },
   { title: "Blog", href: "/blog" },
   { title: "Guides", href: "/guides" },
   { title: "Projects", href: "/projects" },

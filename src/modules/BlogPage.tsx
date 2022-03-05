@@ -5,7 +5,7 @@ import { NextSeo } from "next-seo";
 import { baseUrl } from "@/lib/constants";
 import BlogPost from "@/components/BlogPost";
 
-import type { Blog } from ".contentlayer/types";
+import type { Blog } from "contentlayer/generated";
 
 interface Props {
   posts: Pick<Blog, "title" | "summary" | "slug" | "publishedAt" | "image">[];

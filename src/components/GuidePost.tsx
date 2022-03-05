@@ -6,7 +6,7 @@ import dayjs from "dayjs";
 
 import fetcher from "@/lib/fetcher";
 
-import type { Guides } from ".contentlayer/types";
+import type { Guides } from "contentlayer/generated";
 import type { Views } from "@/types/Views";
 
 type Props = Pick<Guides, "title" | "description" | "slug" | "publishedAt">;

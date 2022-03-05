@@ -10,7 +10,9 @@
       "@/styles/*": ["src/styles/*"],
       "@/modules/*": ["src/modules/*"],
       "@/layouts/*": ["src/layouts/*"],
-      "@/components/*": ["src/components/*"]
+      "@/components/*": ["src/components/*"],
+
+      "contentlayer/generated": ["./.contentlayer/generated"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -27,6 +29,11 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".contentlayer/generated"
+  ],
   "exclude": ["node_modules"]
 }

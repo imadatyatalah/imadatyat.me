@@ -30,7 +30,7 @@ const computedFields: ComputedFields = {
 const Blog = defineDocumentType(() => ({
   name: "Blog",
   filePathPattern: "blog/*.mdx",
-  bodyType: "mdx",
+  contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
     publishedAt: { type: "string", required: true },
@@ -43,7 +43,7 @@ const Blog = defineDocumentType(() => ({
 const Guides = defineDocumentType(() => ({
   name: "Guides",
   filePathPattern: "guides/*.mdx",
-  bodyType: "mdx",
+  contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
     publishedAt: { type: "string", required: true },
@@ -56,7 +56,7 @@ const Guides = defineDocumentType(() => ({
 const OtherPage = defineDocumentType(() => ({
   name: "OtherPage",
   filePathPattern: "*.mdx",
-  bodyType: "mdx",
+  contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
   },

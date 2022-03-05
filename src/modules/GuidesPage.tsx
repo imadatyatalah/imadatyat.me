@@ -5,7 +5,7 @@ import { NextSeo } from "next-seo";
 import { baseUrl } from "@/lib/constants";
 import GuidePost from "@/components/GuidePost";
 
-import type { Guides } from ".contentlayer/types";
+import type { Guides } from "contentlayer/generated";
 
 interface Props {
   guides: Pick<Guides, "title" | "description" | "slug" | "publishedAt">[];

@@ -7,7 +7,7 @@ import dayjs from "dayjs";
 
 import fetcher from "@/lib/fetcher";
 
-import type { Blog } from ".contentlayer/types";
+import type { Blog } from "contentlayer/generated";
 import type { Views } from "@/types/Views";
 
 type Props = Pick<Blog, "title" | "summary" | "slug" | "publishedAt" | "image">;
