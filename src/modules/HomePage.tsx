@@ -32,7 +32,7 @@ const HomePage = ({ posts, guides }: Props) => {
       <section>
         <div className="my-4">
           <h1 className="mb-2 text-3xl font-bold">
-            Hey there, I&apos;m Imad{" "}
+            Hey there, I&apos;m Imad Atyat-Alah{" "}
             <span className="wave" role="img" aria-label="Waving Hand">
               👋🏼
             </span>

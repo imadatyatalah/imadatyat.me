@@ -3,6 +3,7 @@ import React from "react";
 import TwitterIcon from "@/icons/TwitterIcon";
 import GithubIcon from "@/icons/GithubIcon";
 import DevIcon from "@/icons/DevIcon";
+import LinkedInIcon from "@/icons/LinkedInIcon";
 
 const SOCIAL_LINKS = [
   {
@@ -19,6 +20,11 @@ const SOCIAL_LINKS = [
     title: "Dev",
     href: "https://dev.to/imadatyat",
     icon: DevIcon,
+  },
+  {
+    title: "LinkedIn",
+    href: "https://www.linkedin.com/in/imadatyatalah",
+    icon: LinkedInIcon,
   },
 ];
 
