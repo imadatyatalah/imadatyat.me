@@ -7,7 +7,7 @@ import { baseUrl } from "@/lib/constants";
 import ShareViaTwitter from "@/components/ShareViaTwitter";
 import ViewCounter from "@/components/ViewCounter";
 
-import type { Guides } from ".contentlayer/types";
+import type { Guides } from "contentlayer/generated";
 
 const GuideLayout = ({
   children,

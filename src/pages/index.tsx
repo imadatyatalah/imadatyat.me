@@ -1,7 +1,7 @@
 import React from "react";
 import type { InferGetStaticPropsType, NextPage } from "next";
 
-import { allBlogs, allGuides } from ".contentlayer/data";
+import { allBlogs, allGuides } from "contentlayer/generated";
 import { pick } from "@contentlayer/client";
 
 import HomePage from "@/modules/HomePage";

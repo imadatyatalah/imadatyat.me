@@ -2,8 +2,8 @@ import React from "react";
 import type { GetStaticProps, NextPage } from "next";
 
 import { useMDXComponent } from "next-contentlayer/hooks";
-import { allOtherPages } from ".contentlayer/data";
-import type { OtherPage } from ".contentlayer/types";
+import { allOtherPages } from "contentlayer/generated";
+import type { OtherPage } from "contentlayer/generated";
 
 import MDXComponents from "@/components/MDXComponents";
 import AboutLayout from "@/layouts/About";

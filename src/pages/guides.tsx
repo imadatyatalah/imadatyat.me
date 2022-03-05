@@ -1,7 +1,7 @@
 import React from "react";
 import type { InferGetStaticPropsType, NextPage } from "next";
 
-import { allGuides } from ".contentlayer/data";
+import { allGuides } from "contentlayer/generated";
 import { pick } from "@contentlayer/client";
 
 import GuidesPage from "@/modules/GuidesPage";

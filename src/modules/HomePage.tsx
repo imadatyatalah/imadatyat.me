@@ -11,7 +11,7 @@ import BlogPost from "@/components/BlogPost";
 import GuidePost from "@/components/GuidePost";
 import ArrowRight from "@/icons/ArrowRight";
 
-import type { Blog, Guides } from ".contentlayer/types";
+import type { Blog, Guides } from "contentlayer/generated";
 
 interface Props {
   posts: Pick<Blog, "title" | "summary" | "slug" | "publishedAt" | "image">[];
