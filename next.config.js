@@ -1,4 +1,6 @@
 const { withContentlayer } = require("next-contentlayer");
+const withPWA = require("next-pwa");
+const withPlugins = require("next-compose-plugins");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -7,4 +9,16 @@ const nextConfig = {
   redirects: require("./next-redirects"),
 };
 
-module.exports = withContentlayer()(nextConfig);
+const PWAConfig = {
+  pwa: {
+    dest: "public",
+    register: true,
+    skipWaiting: true,
+    disable: process.env.NODE_ENV === "development",
+  },
+};
+
+module.exports = withPlugins(
+  [withContentlayer(), withPWA(PWAConfig)],
+  nextConfig
+);
