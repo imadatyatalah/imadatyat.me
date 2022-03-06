@@ -1,3 +1,9 @@
+<div align="center">
+  <a href="https://github.com/imadatyatalah/pocto/">
+    <img src="./public/logo.svg" alt="Imad Atyat-Alah logo" width="50" />
+  </a>
+</div>
+
 <h1 align="center">imadatyatalah.me</h1>
 
 ## Screenshot

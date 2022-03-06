@@ -56,7 +56,7 @@ const HomePage = ({ posts, guides }: Props) => {
               <span className="font-semibold">
                 <RainbowHighlight color={colors[2]}>Front-End</RainbowHighlight>
               </span>
-              . I enjoy working with TypeScript, React, Next.js, Prisma,
+              . I enjoy working with React, NextJS, NestJS, Prisma, TypeScript,
               TailwindCSS...
             </p>
           </RoughNotationGroup>
