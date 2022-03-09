@@ -8,6 +8,7 @@ import sunnysideAgencyLandingPage from "public/static/projects/sunnyside-agency-
 import testimonialsGridSection from "public/static/projects/testimonials-grid-section.jpg";
 import urlShorteningApi from "public/static/projects/url-shortening-api.jpg";
 import QRCodeComponent from "public/static/projects/qr-code-component.jpg";
+import adviceGeneratorApp from "public/static/projects/advice-generator-app.jpg";
 import octocake from "public/static/projects/octocake.png";
 
 // Frontend Mentor challenges repository
@@ -118,6 +119,20 @@ export const projects: Project[] = [
     repo: `${challengesRepo}/qr-code-component-main`,
     live: "https://qr-code-component-imadatyatalah.netlify.app/",
     image: QRCodeComponent,
+  },
+  {
+    title: "Advice generator app",
+    tags: [
+      "frontend-mentor",
+      "front-end",
+      "react",
+      "vitejs",
+      "tailwindcss",
+      "API",
+    ],
+    repo: `${challengesRepo}/advice-generator-app-main`,
+    live: "https://advice-generator-app-main-imadatyatalah.netlify.app/",
+    image: adviceGeneratorApp,
   },
 
   {

@@ -113,7 +113,7 @@
 
 @supports not (backdrop-filter: none) {
   .sticky-nav {
-    @apply bg-[#090117] bg-opacity-100 backdrop-filter-none;
+    @apply bg-[#f7f9fb] dark:bg-[#090117] bg-opacity-100 backdrop-filter-none;
   }
 }
 

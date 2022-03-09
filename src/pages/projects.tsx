@@ -21,7 +21,7 @@ const Projects: NextPage = () => {
         <div className="flex flex-wrap my-4">
           {tags.map((tag) => (
             <button
-              className="px-2 py-1 mb-3 mr-3 font-semibold rounded-md lg:transition-all lg:transform bg-fuchsia-700 hover:bg-fuchsia-600 lg:hover:scale-105"
+              className="px-2 py-1 mb-3 mr-3 font-semibold text-white rounded-md lg:transition-all lg:transform bg-fuchsia-700 hover:bg-fuchsia-600 lg:hover:scale-105"
               onClick={() => setCurrentTag(tag)}
               key={tag}
             >
