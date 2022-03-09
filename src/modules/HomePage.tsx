@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 
 import { NextSeo } from "next-seo";
-import { RoughNotationGroup } from "react-rough-notation";
 
 import { baseUrl } from "@/lib/constants";
-import { shuffleArray } from "@/lib/shuffleArray";
-import RainbowHighlight, { COLORS } from "@/components/RainbowHighlight";
 import BlogPost from "@/components/BlogPost";
 import GuidePost from "@/components/GuidePost";
 import ArrowRight from "@/icons/ArrowRight";
@@ -19,12 +16,6 @@ interface Props {
 }
 
 const HomePage = ({ posts, guides }: Props) => {
-  const [colors, setColors] = useState<string[]>([]);
-
-  useEffect(() => {
-    setColors(shuffleArray(COLORS));
-  }, []);
-
   return (
     <>
       <NextSeo title="Home" canonical={baseUrl} />
@@ -38,28 +29,13 @@ const HomePage = ({ posts, guides }: Props) => {
             </span>
           </h1>
 
-          <RoughNotationGroup show={true}>
-            <p>
-              I&apos;m{" "}
-              <span className="font-semibold">
-                <RainbowHighlight color={colors[0]}>
-                  Imad Atyat-Alah
-                </RainbowHighlight>
-              </span>
-              , A{" "}
-              <span className="font-semibold">
-                <RainbowHighlight color={colors[1]}>
-                  Self-taught
-                </RainbowHighlight>
-              </span>{" "}
-              Full Stack JavaScript/TypeScript developer with passion for{" "}
-              <span className="font-semibold">
-                <RainbowHighlight color={colors[2]}>Front-End</RainbowHighlight>
-              </span>
-              . I enjoy working with React, NextJS, NestJS, Prisma, TypeScript,
-              TailwindCSS...
-            </p>
-          </RoughNotationGroup>
+          <p>
+            I&apos;m <span className="font-semibold">Imad Atyat-Alah</span>, A{" "}
+            <span className="font-semibold">Self-taught</span> Full Stack
+            JavaScript/TypeScript developer with passion for{" "}
+            <span className="font-semibold">Front-End</span>. I enjoy working
+            with React, Next.js, Nest.js, Prisma, TypeScript, Tailwind CSS...
+          </p>
         </div>
 
         <div className="my-4">
