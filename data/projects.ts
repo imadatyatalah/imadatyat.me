@@ -9,6 +9,7 @@ import testimonialsGridSection from "public/static/projects/testimonials-grid-se
 import urlShorteningApi from "public/static/projects/url-shortening-api.jpg";
 import QRCodeComponent from "public/static/projects/qr-code-component.jpg";
 import adviceGeneratorApp from "public/static/projects/advice-generator-app.jpg";
+import socialMediaDashboardWithThemeSwitcher from "public/static/projects/social-media-dashboard-with-theme-switcher.jpg";
 import octocake from "public/static/projects/octocake.png";
 
 // Frontend Mentor challenges repository
@@ -133,6 +134,13 @@ export const projects: Project[] = [
     repo: `${challengesRepo}/advice-generator-app-main`,
     live: "https://advice-generator-app-main-imadatyatalah.netlify.app/",
     image: adviceGeneratorApp,
+  },
+  {
+    title: "Social media dashboard with theme switcher",
+    tags: ["frontend-mentor", "front-end", "react", "vitejs", "tailwindcss"],
+    repo: `${challengesRepo}/social-media-dashboard-with-theme-switcher-master`,
+    live: "https://social-media-dashboard-with-theme-switcher-imadatyatalah.netlify.app/",
+    image: socialMediaDashboardWithThemeSwitcher,
   },
 
   {
