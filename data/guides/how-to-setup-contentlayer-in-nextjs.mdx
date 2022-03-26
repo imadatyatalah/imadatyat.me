@@ -19,6 +19,8 @@ image: "/static/guides/how-to-setup-contentlayer-in-nextjs/banner.png"
 
 ```bash
 npm install contentlayer next-contentlayer
+# or
+yarn add contentlayer next-contentlayer
 ```
 
 ### Add your Contentlayer config
@@ -38,6 +40,7 @@ const computedFields = {
 const Post = defineDocumentType(() => ({
   name: "Post",
   filePathPattern: `**/*.md`,
+  contentType: "markdown"
   fields: {
     title: { type: "string", required: true },
     date: { type: "string", required: true },
@@ -59,6 +62,42 @@ const { withContentlayer } = require("next-contentlayer");
 module.exports = withContentlayer()({
   // Your Next.js config...
 });
+```
+
+### Add a `jsconfig.json` file
+
+```json:jsconfig.json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "contentlayer/generated": ["./.contentlayer/generated"]
+    }
+  },
+  "include": [".contentlayer/generated"]
+}
+```
+
+In case you are using TypeScript in your project you already have a `tsconfig.json`
+which you will add this lines of code to.
+
+```diff:tsconfig.json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+       // These option allow you to configure module aliases.
+       // So you will import contentlayer generated content from "contentlayer/generated" instead of "./.contentlayer/generated"
++      "contentlayer/generated": ["./.contentlayer/generated"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
++    ".contentlayer/generated"
+  ],
+}
 ```
 
 ### Add some posts
@@ -85,7 +124,7 @@ Importantly, Next.js lets you **choose** which pre-rendering form to use for eac
 
 ```jsx:pages/index.js
 import Link from "next/link";
-import { allPosts } from ".contentlayer/data";
+import { allPosts } from "contentlayer/generated";
 import { pick } from "@contentlayer/client";
 
 export default function Home({ posts }) {
@@ -121,7 +160,7 @@ In this section you should know how [dynamic routes](https://nextjs.org/docs/rou
 Add `posts/[slug].js` inside `pages` folder.
 
 ```jsx:pages/posts/[slug].js
-import { allPosts } from '.contentlayer/data'
+import { allPosts } from 'contentlayer/generated'
 
 export default function Post({ post }) {
   return (
@@ -157,6 +196,7 @@ In this guide, We learned about how we can integrate Next.js with Contentlayer,
 As well as how we can display all posts and post by slug.
 
 An online demo of the application that we built is hosted on [Vercel](https://nextjs-contentlayer-guide.vercel.app)
-and the code is available on [GitHub](https://github.com/imadatyatalah/nextjs-contentlayer-guide).
+and the code is available on [GitHub](https://github.com/imadatyatalah/nextjs-contentlayer-guide)
+for TypeScript version check out this [GitHub branch](https://github.com/imadatyatalah/nextjs-contentlayer-guide/tree/typescript).
 
 Make sure to [contact me](https://twitter.com/ImadAtyat) if you have any questions.
