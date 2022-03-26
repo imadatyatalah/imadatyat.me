@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 import timeTrackingDashboard from "public/static/projects/time-tracking-dashboard.jpg";
 import columnPreviewCardComponent from "public/static/projects/3-column-preview-card-component.jpg";
 import loopstudiosLandingPage from "public/static/projects/loopstudios-landing-page.jpg";
