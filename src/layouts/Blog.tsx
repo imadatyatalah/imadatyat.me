@@ -32,7 +32,9 @@ const BlogLayout = ({ children, post }: PropsWithChildren<{ post: Blog }>) => {
           </h1>
 
           <div className="text-sm md:flex md:justify-between md:w-full">
-            <p>Imad Atyat-Alah / {dayjs(publishedAt).format("MMMM D, YYYY")}</p>
+            <p>
+              Imad Atyat-Allah / {dayjs(publishedAt).format("MMMM D, YYYY")}
+            </p>
 
             <p>
               {readingTime.text} {` • `}

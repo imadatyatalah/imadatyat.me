@@ -23,7 +23,7 @@ const SOCIAL_LINKS = [
   },
   {
     title: "LinkedIn",
-    href: "https://www.linkedin.com/in/imadatyatalah",
+    href: "https://www.linkedin.com/in/imadatyat",
     icon: LinkedInIcon,
   },
 ];
@@ -48,7 +48,7 @@ const Footer = () => {
       </div>
 
       <p className="text-sm">
-        &copy; 2021-present Imad Atyat-Alah. All Rights Reserved.
+        &copy; 2021-present Imad Atyat-Allah. All Rights Reserved.
       </p>
     </footer>
   );

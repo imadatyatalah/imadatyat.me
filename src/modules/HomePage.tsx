@@ -23,14 +23,14 @@ const HomePage = ({ posts, guides }: Props) => {
       <section>
         <div className="my-4">
           <h1 className="mb-2 text-3xl font-bold">
-            Hey there, I&apos;m Imad Atyat-Alah{" "}
+            Hey there, I&apos;m Imad Atyat-Allah{" "}
             <span className="wave" role="img" aria-label="Waving Hand">
               👋🏼
             </span>
           </h1>
 
           <p>
-            I&apos;m <span className="font-semibold">Imad Atyat-Alah</span>, A{" "}
+            I&apos;m <span className="font-semibold">Imad Atyat-Allah</span>, A{" "}
             <span className="font-semibold">Self-taught</span> Full Stack
             JavaScript/TypeScript developer with passion for{" "}
             <span className="font-semibold">Front-End</span>. I enjoy working

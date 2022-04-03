@@ -20,7 +20,7 @@ const AboutLayout = ({ children }: Props) => {
 
         <div>
           <p className="my-5">
-            I&apos;m Imad Atyat-Alah, A Self-taught Full Stack developer who
+            I&apos;m Imad Atyat-Allah, A Self-taught Full Stack developer who
             loves to work with modern web technologies like React, NextJS,
             NestJS, Prisma, TypeScript...
           </p>
