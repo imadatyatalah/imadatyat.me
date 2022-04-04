@@ -2,15 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/lib/*": ["src/lib/*"],
-      "@/pages/*": ["src/pages/*"],
-      "@/types/*": ["src/types/*"],
-      "@/icons/*": ["src/icons/*"],
-      "@/hooks/*": ["src/hooks/*"],
-      "@/styles/*": ["src/styles/*"],
-      "@/modules/*": ["src/modules/*"],
-      "@/layouts/*": ["src/layouts/*"],
-      "@/components/*": ["src/components/*"],
+      "@/*": ["./src/*"],
 
       "contentlayer/generated": ["./.contentlayer/generated"]
     },
