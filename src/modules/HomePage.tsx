@@ -23,18 +23,30 @@ const HomePage = ({ posts, guides }: Props) => {
       <section>
         <div className="my-4">
           <h1 className="mb-2 text-3xl font-bold">
-            Hey there, I&apos;m Imad Atyat-Allah{" "}
+            Hey, I&apos;m Imad Atyat-Allah{" "}
             <span className="wave" role="img" aria-label="Waving Hand">
               👋🏼
             </span>
           </h1>
 
+          <p className="my-4">
+            I am a passionate Self-taught Full Stack JavaScript/TypeScript
+            developer specialized in Front-end development using React and
+            TypeScript. I enjoy working with React, Next.js, Nest.js, Prisma,
+            TypeScript, Tailwind CSS...
+          </p>
+
           <p>
-            I&apos;m <span className="font-semibold">Imad Atyat-Allah</span>, A{" "}
-            <span className="font-semibold">Self-taught</span> Full Stack
-            JavaScript/TypeScript developer with passion for{" "}
-            <span className="font-semibold">Front-End</span>. I enjoy working
-            with React, Next.js, Nest.js, Prisma, TypeScript, Tailwind CSS...
+            P.S. this website is open-source and available on{" "}
+            <a
+              href="http://github.com/imadatyatalah/imadatyatalah.me"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="no-underline font-medium transition-all text-fuchsia-700 dark:text-fuchsia-500 hover:underline"
+            >
+              Github
+            </a>
+            .
           </p>
         </div>
 
