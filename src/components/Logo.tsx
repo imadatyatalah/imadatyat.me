@@ -4,7 +4,10 @@ import Link from "next/link";
 const Logo = () => (
   <div className="select-none">
     <Link href="/">
-      <a className="text-2xl font-semibold">
+      <a
+        className="text-2xl font-semibold"
+        aria-label="Imad Atyat-Allah's logo"
+      >
         <svg
           width="40"
           height="40"
