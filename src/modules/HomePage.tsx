@@ -39,7 +39,7 @@ const HomePage = ({ posts, guides }: Props) => {
           <p>
             P.S. this website is open-source and available on{" "}
             <a
-              href="http://github.com/imadatyatalah/imadatyatalah.me"
+              href="http://github.com/imadatyatalah/imadatyat.me"
               target="_blank"
               rel="noopener noreferrer"
               className="no-underline font-medium transition-all text-fuchsia-700 dark:text-fuchsia-500 hover:underline"
