@@ -6,13 +6,13 @@ const NextSeo = {
 
   openGraph: {
     type: "website",
-    url: "https://imadatyatalah.vercel.app",
+    url: "https://imadatyat.me",
     site_name: "Imad Atyat-Allah",
   },
 
   twitter: {
     handle: "@ImadAtyat",
-    site: "@imadatyatalah",
+    site: "@imadatyat",
     cardType: "summary_large_image",
   },
 };

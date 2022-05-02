@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://imadatyatalah.vercel.app
+Host: https://imadatyat.me
 
 # Sitemaps
-Sitemap: https://imadatyatalah.vercel.app/sitemap.xml
+Sitemap: https://imadatyat.me/sitemap.xml

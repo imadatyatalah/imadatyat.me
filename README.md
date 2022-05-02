@@ -4,7 +4,7 @@
   </a>
 </div>
 
-<h1 align="center">imadatyatalah.me</h1>
+<h1 align="center">imadatyat.me</h1>
 
 ## Screenshot
 
@@ -12,4 +12,4 @@
 
 ## License
 
-Distributed under the MIT License. See [`LICENSE`](https://github.com/imadatyatalah/imadatyatalah.me/blob/main/LICENSE) for more information.
+Distributed under the MIT License. See [`LICENSE`](https://github.com/imadatyatalah/imadatyat.me/blob/main/LICENSE) for more information.
