@@ -26,6 +26,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <>
       <DefaultSeo {...SEO} />
 
+      {/* @ts-ignore */}
       <ThemeProvider forcedTheme="dark" attribute="class">
         <Global>
           <Component {...pageProps} />
