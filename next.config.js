@@ -7,4 +7,4 @@ const nextConfig = {
   redirects: require("./next-redirects"),
 };
 
-module.exports = withContentlayer()(nextConfig);
+module.exports = withContentlayer(nextConfig);
