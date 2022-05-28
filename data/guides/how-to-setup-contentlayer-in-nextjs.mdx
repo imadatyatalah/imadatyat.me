@@ -11,9 +11,25 @@ image: "/static/guides/how-to-setup-contentlayer-in-nextjs/banner.png"
 
 > Note: Contentlayer still in development and some APIs might change!
 
-[Contentlayer](https://github.com/contentlayerdev/contentlayer) turns your content into data - making it super easy to import MD(X) and CMS content in your app.
+[Contentlayer](https://www.contentlayer.dev) turns your content into data - making it super easy to import MD(X) and CMS content in your app.
 
-## Setting up Contentlayer
+## Automatic Setup
+
+The easiest way create a new Next.js app with Contentlayer is by usign [offical Next.js example](https://github.com/vercel/next.js/tree/canary/examples/with-contentlayer),
+which sets up everything automatically for you. To create a project, run:
+
+```bash
+npx create-next-app --example with-contentlayer with-contentlayer-app
+# or
+yarn create next-app --example with-contentlayer with-contentlayer-app
+```
+
+After the installation is complete:
+
+- Run `npm run dev` or `yarn dev` to start the development server on `http://localhost:3000`.
+- Visit `http://localhost:3000` to view your application
+
+## Manual Setup
 
 ### Install Contentlayer in your Next.js app
 
