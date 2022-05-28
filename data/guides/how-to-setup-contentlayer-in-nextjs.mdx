@@ -9,13 +9,13 @@ image: "/static/guides/how-to-setup-contentlayer-in-nextjs/banner.png"
 
 ## What is Contentlayer?
 
-> Note: Contentlayer still in development and some APIs might change!
+> Note: Contentlayer is still in development and some APIs might change!
 
 [Contentlayer](https://www.contentlayer.dev) turns your content into data - making it super easy to import MD(X) and CMS content in your app.
 
 ## Automatic Setup
 
-The easiest way to create a new Next.js app with Contentlayer is by using [offical Next.js example](https://github.com/vercel/next.js/tree/canary/examples/with-contentlayer),
+The easiest way to create a new Next.js app with Contentlayer is by using [official Next.js example](https://github.com/vercel/next.js/tree/canary/examples/with-contentlayer),
 which sets up everything automatically for you. To create a project, run:
 
 ```bash
@@ -41,7 +41,7 @@ yarn add contentlayer next-contentlayer
 
 ### Add your Contentlayer config
 
-Create `contentlayer.config.js` file in the root of the project with the following code.
+Create `contentlayer.config.js` file at the root of the project with the following code.
 
 ```js:contentlayer.config.js
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
@@ -95,7 +95,7 @@ module.exports = withContentlayer({
 ```
 
 In case you are using TypeScript in your project you already have a `tsconfig.json`
-which you will add this lines of code to.
+to which you will add these lines of code to.
 
 ```diff:tsconfig.json
 {
@@ -118,7 +118,7 @@ which you will add this lines of code to.
 
 ### Add some posts
 
-1. Add `posts` folder in the root of your app(Where your content will live).
+1. Add `posts` folder at the root of your app(Where your content will live).
 2. Add `.md` files(e.g. `pre-rendering.md`).
 3. Add your content(You can write anything you want, This is just an example).
 
@@ -171,7 +171,7 @@ export async function getStaticProps() {
 
 ### Create dynamic routes for each post
 
-In this section you should know how [dynamic routes](https://nextjs.org/docs/routing/dynamic-routes) works in Next.js,
+In this section, you should know how [dynamic routes](https://nextjs.org/docs/routing/dynamic-routes) works in Next.js,
 
 Add `posts/[slug].js` inside `pages` folder.
 
