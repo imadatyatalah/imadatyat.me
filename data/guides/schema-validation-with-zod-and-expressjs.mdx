@@ -23,7 +23,7 @@ Zod comes with some really great features like:
 ## Why you need to validate your API Calls?
 
 Validating your API Calls helps you getting the right data that you want,
-For example you want your users to have a strong password(e.g. atleast 6 characters),
+For example you want your users to have a strong password(e.g. at least 6 characters),
 You can use something like Zod or Yup and prevent users from entering a short password(less than 6 characters).
 Also doing validation on the server makes you server much secure,
 Because no one can open the developer tools and go through your code and figure out how to beat your validation.
@@ -89,9 +89,9 @@ const LoginSchema = z.object({
   // In this example we will only validate the request body.
   body: z.object({
     // email should be valid and non-empty
-    email: z.string().nonempty("Email is required").email(),
-    // password should be atleast 6 characters
-    password: z.string().nonempty("Password is required.").min(6),
+    email: z.string().email(),
+    // password should be at least 6 characters
+    password: z.string().min(6),
   }),
 });
 
@@ -145,9 +145,12 @@ const app = express();
 app.use(express.json());
 
 const LoginSchema = z.object({
+  // In this example we will only validate the request body.
   body: z.object({
-    email: z.string().nonempty("Email is required").email(),
-    password: z.string().nonempty("Password is required.").min(6),
+    // email should be valid and non-empty
+    email: z.string().email(),
+    // password should be at least 6 characters
+    password: z.string().min(6),
   }),
 });
 

@@ -46,13 +46,6 @@ Create `contentlayer.config.js` file at the root of the project with the followi
 ```js:contentlayer.config.js
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
 
-const computedFields = {
-  slug: {
-    type: "string",
-    resolve: (doc) => doc._raw.sourceFileName.replace(/\.md$/, ""),
-  },
-};
-
 const Post = defineDocumentType(() => ({
   name: "Post",
   filePathPattern: `**/*.md`,
@@ -61,7 +54,12 @@ const Post = defineDocumentType(() => ({
     title: { type: "string", required: true },
     date: { type: "string", required: true },
   },
-  computedFields,
+  computedFields: {
+    slug: {
+      type: "string",
+      resolve: (doc) => doc._raw.sourceFileName.replace(/\.md/, ""),
+    },
+  },
 }));
 
 export default makeSource({

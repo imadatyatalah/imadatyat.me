@@ -1,12 +1,12 @@
 {
   "name": "imadatyat.me",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "postbuild": "NODE_OPTIONS='--experimental-json-modules' next-sitemap --config next-sitemap.js",
+    "postbuild": "next-sitemap --config next-sitemap.js",
     "lint": "next lint",
     "prettier-format": "npx prettier --write .",
     "prettier-check": "npx prettier --check .",
