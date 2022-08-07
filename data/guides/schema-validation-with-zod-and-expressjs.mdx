@@ -20,13 +20,13 @@ Zod comes with some really great features like:
 - Zero dependencies
 - Works with JavaScript too
 
-## Why you need to validate your API Calls?
+## Why do you need to validate your API Calls?
 
-Validating your API Calls helps you getting the right data that you want,
-For example you want your users to have a strong password(e.g. at least 6 characters),
+Validating your API Calls helps you get the right data that you want,
+For example, you want your users to have a strong password(e.g. at least 6 characters),
 You can use something like Zod or Yup and prevent users from entering a short password(less than 6 characters).
-Also doing validation on the server makes you server much secure,
-Because no one can open the developer tools and go through your code and figure out how to beat your validation.
+Also, doing validation on the server makes your server much more secure,
+Because no one can open the developer tools, go through your code and figure out how to beat your validation.
 
 ## Let's start coding
 
@@ -44,7 +44,7 @@ npm init -y
 npm install express zod
 ```
 
-Next let's add the following script to our `package.json` file.
+Next, add the following script to our `package.json` file.
 
 ```json:package.json
 {
@@ -57,6 +57,7 @@ Next let's add the following script to our `package.json` file.
 ```
 
 Now let's start an Express.js server.
+Create a file called `index.js` at the root of the project:
 
 ```js:index.js
 const express = require("express");
@@ -74,7 +75,7 @@ Then run the Express.js server(You can access it at [`http://localhost:1337`](ht
 npm run dev
 ```
 
-Next we can start working with Zod,
+Next, we can start working with Zod,
 Let's first import `z` from `zod` and add a simple login schema.
 
 ```js:index.js {2,8-16}
@@ -177,7 +178,7 @@ app.listen(1337, () => console.log(`> Ready on http://localhost:${1337}`));
 
 ## Conclusion
 
-In this guide, We learned about how we can validate our Express.js REST API Calls using Zod,
+In this guide, We learned how to validate our Express.js REST API Calls using Zod,
 You can find the code on [GitHub](https://github.com/imadatyatalah/schema-validation-with-zod-and-expressjs-guide).
 
 Make sure to [contact me](https://twitter.com/ImadAtyat) if you have any questions.
