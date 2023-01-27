@@ -4,6 +4,7 @@ import type { AppProps } from "next/app";
 
 import Global from "@/layouts/Global";
 
+import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "next-themes";
 import { DefaultSeo } from "next-seo";
 import NProgress from "nprogress";
@@ -32,6 +33,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           <Component {...pageProps} />
         </Global>
       </ThemeProvider>
+
+      <Analytics />
     </>
   );
 };
