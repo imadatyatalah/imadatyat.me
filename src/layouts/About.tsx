@@ -20,17 +20,16 @@ const AboutLayout = ({ children }: Props) => {
 
         <div>
           <p className="my-5">
-            I&apos;m Imad Atyat-Allah, A Self-taught Full Stack developer who
-            loves to work with modern web technologies like React, NextJS,
-            NestJS, Prisma, TypeScript...
+            I&apos;m Imad Atyat-Allah, A Front-end React developer passionate
+            about creating beautiful, user-friendly web applications.
           </p>
 
           <p className="mt-5">
-            I started my journey as a Self-taught web developer in the second
-            year of High School when I fall in love by the web development world
-            and wanted to build amazing and fast web apps. Ever since I have
-            fallen in love with web development and spend most of my days taking
-            my skills to the next-level.
+            My fascination with the world of web development began in high
+            school, where I discovered a passion for creating fast and
+            innovative web applications. Since then, I have dedicated myself to
+            continually enhancing my skills and expertise in the field of web
+            development.
           </p>
         </div>
 
