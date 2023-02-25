@@ -23,17 +23,15 @@ const HomePage = ({ posts, guides }: Props) => {
       <section>
         <div className="my-4">
           <h1 className="mb-2 text-3xl font-bold">
-            Hey, I&apos;m Imad Atyat-Allah{" "}
+            Hey, I&apos;m Imad{" "}
             <span className="wave" role="img" aria-label="Waving Hand">
               👋🏼
             </span>
           </h1>
 
           <p className="my-4">
-            I am a passionate Self-taught Full Stack JavaScript/TypeScript
-            developer specialized in Front-end development using React and
-            TypeScript. I enjoy working with React, Next.js, Nest.js, Prisma,
-            TypeScript, Tailwind CSS...
+            A Front-end React developer passionate about creating beautiful,
+            user-friendly web applications.
           </p>
 
           <p>
