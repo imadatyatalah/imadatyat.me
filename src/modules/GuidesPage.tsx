@@ -20,7 +20,7 @@ const GuidesPage = ({ guides }: Props) => {
         canonical={`${baseUrl}/guides`}
       />
 
-      <section>
+      <section className="my-4">
         <h1 className="text-3xl font-bold">Guides</h1>
 
         <div className="my-4">

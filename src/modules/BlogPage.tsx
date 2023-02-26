@@ -20,7 +20,7 @@ const BlogPage = ({ posts }: Props) => {
         canonical={`${baseUrl}/blog`}
       />
 
-      <section>
+      <section className="my-4">
         <h1 className="text-3xl font-bold">Blog</h1>
 
         <div className="flex flex-col items-center my-4 sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">

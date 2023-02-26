@@ -15,7 +15,7 @@ const Projects: NextPage = () => {
     <>
       <NextSeo title="Projects" canonical={`${baseUrl}/projects`} />
 
-      <section>
+      <section className="my-4">
         <h1 className="text-3xl font-bold">Projects</h1>
 
         <div className="flex flex-wrap my-4">
